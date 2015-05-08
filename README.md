@@ -3,13 +3,18 @@ component element based on k-component
 
 this is a set of defined basic component elements that we can use directly.
 
-必须显示声明依赖，例如：
-```javascript
-require('k-component/component!k-component-element/k-selection');
-require('k-component/component!./demo-preview');
-require('css!./demo-preview.less');
-```
+## 引用方式
 
-这里的 k-selection 即使在其他文件中有过依赖，也要显示声明依赖，这是为了防止出现执行时出现未注册的问题导致的执行失败。
+可直接使用 `require('k-component/component!k-component-element/some-element');` 的方式
+也可以 `require('k-component-element/SomeElement')`
 
-例如$k('#abc') 可能为 undefined 的问题。
+前者建议项目模式下使用
+后者建议开发 element 时使用以便避免按需加载顺序问题
+
+## 介绍
+主旨是创建一系列自定义的 Element 来使用
+
+## 使用
+
+$k(query|element)，可用于获取 component
+$k.$，可用于穿透 shadowDOM 的获取元素
