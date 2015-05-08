@@ -1,0 +1,18 @@
+{
+    "name": "fc-storage",
+    "version": "0.0.1-alpha.6",
+    "maintainers": [
+        {
+            "name": "Leo Wang",
+            "email": "wangkemiao@baidu.com"
+        }
+    ],
+    "contributors": [],
+    "dependencies": {
+        "fc-core": "0.x"
+    },
+    "main": "main",
+    "description": "FC storage封装库",
+    "homepage": "https://github.com/fcfe/fc-storage",
+    "repository": "git://github.com/fcfe/fc-storage"
+}

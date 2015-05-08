@@ -1,0 +1,12 @@
+{
+    "LICENSE": "94984eb5a843ce1d48e7cd40996a667c",
+    "jsduck/meta/Promise.js": "7d5de98b15fd4d60cc3f53be679f057d",
+    "README.md": "171f34256130885f796aabcce1705690",
+    "src/main.js": "1c28060d12228e5259b64d06610012f2",
+    "src/cookie.js": "b69a6345907c3c723ba933931d5c0fb3",
+    "package.json": "887dfb273513318323f31838d1c5b8f1",
+    "src/localStorage.js": "ea43e29ce2f584260ae26448d657da65",
+    "src/memory.js": "fd91b81f96e08e508106093226e1dc50",
+    "src/sessionStorage.js": "99bbc34110dba603ceaf21ff522566b9",
+    "src/util.js": "5c90b2b1b95f4d0602e25fb658e62439"
+}

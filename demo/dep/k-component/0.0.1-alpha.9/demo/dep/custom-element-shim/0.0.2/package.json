@@ -1,0 +1,15 @@
+{
+    "name": "custom-element-shim",
+    "version": "0.0.2",
+    "author": {
+      "name": "Leo Wang",
+      "email": "leowang721@gmail.com",
+      "url": "http://leowang721.github.io"
+    },
+    "contributors": [],
+    "dependencies": {},
+    "main": "document-register-element",
+    "description": "A document.registerElement shim using document-register-element to support IE8 & amd",
+    "homepage": "https://github.com/leowang721/custom-element-shim",
+    "repository": "git://github.com/leowang721/custom-element-shim"
+}

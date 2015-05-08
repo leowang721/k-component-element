@@ -1,0 +1,20 @@
+<k-component name="demo-preview" action="DemoPreview">
+    <template>
+        <section id="demo-preview-coding">
+            <h2>
+                ctrl+Enter 看效果
+                <span id="demo-preview-autosave-info"></span>
+            </h2>
+            <k-selection id="demo-preview-coding-type">
+                <li data-value="html" class="selected">HTML</li>
+                <li data-value="less">LESS</li>
+                <li data-value="javascript">JS</li>
+            </k-selection>
+            <content></content>
+        </section>
+        <section id="demo-preview-result">
+            <h2>预览</h2>
+            <div id="demo-preview-result-main"></div>
+        </section>
+    </template>
+</k-component>

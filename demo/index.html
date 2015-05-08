@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Leo Wang" />
+    <title>开发即时测试页</title>
+    <link rel="stylesheet" type="text/css" href="src/resource/css/main.less">
+    <script src="dep/esl/2.0.6/esl.js"></script>
+    <script>
+    require.config({
+        'baseUrl': 'src',
+        'paths': { 'css': 'common/esl/css' },
+        'packages': [
+            {
+                'name': 'custom-element-shim',
+                'location': '../dep/custom-element-shim/0.0.2/src',
+                'main': 'document-register-element'
+            },
+            {
+                'name': 'eoo',
+                'location': '../dep/eoo/0.1.2/src',
+                'main': 'main'
+            },
+            {
+                'name': 'etpl',
+                'location': '../dep/etpl/3.0.0/src',
+                'main': 'main'
+            },
+            {
+                'name': 'fc-core',
+                'location': '../dep/fc-core/0.0.1-alpha.7/src',
+                'main': 'main'
+            },
+            {
+                'name': 'k-component',
+                'location': '../dep/k-component/0.0.1-alpha.9/src',
+                'main': 'main'
+            },
+            {
+                'name': 'k-component-element',
+                'location': '../dep/k-component-element/0.0.1-alpha.2/src',
+                'main': 'main'
+            },
+            {
+                'name': 'less',
+                'location': '../dep/less/dist',
+                'main': 'less'
+            },
+            {
+                'name': 'mini-event',
+                'location': '../dep/mini-event/1.0.2/src',
+                'main': 'main'
+            },
+            {
+                'name': 'promise',
+                'location': '../dep/promise/1.0.2/src',
+                'main': 'main'
+            },
+            {
+                'name': 'underscore',
+                'location': '../dep/underscore/1.6.0/src',
+                'main': 'underscore'
+            },
+            {
+                'name': 'jquery',
+                'location': '../dep/jquery/1.9.1/src',
+                'main': 'jquery.min'
+            },
+            {
+                'name': 'fc-storage',
+                'location': '../dep/fc-storage/0.0.1-alpha.6/src',
+                'main': 'main'
+            },
+            {
+                'name': 'emc',
+                'location': '../dep/emc/1.0.0/src',
+                'main': 'main'
+            },
+            {
+                'name': 'lodash',
+                'location': '../dep/lodash/3.8.0/src',
+                'main': 'main'
+            }
+        ]
+    });
+    </script>
+</head>
+
+<body>
+    <k-selection id="main-menu"></k-selection>
+    <section id="main">
+        <demo-preview>
+            <div id="demo-preview-coding-main"></div>
+        </demo-preview>
+    </section>
+    <footer id="footer">
+        筚路蓝缕，以启山林；挖坑下套，愿者来掉。
+        <a href="http://weibo.com/seraphwings" target="_blank">@炽天使的羽翼</a>
+    </footer>
+    <script src="dep/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        require(['main']);
+    </script>
+</body>
+</html>
