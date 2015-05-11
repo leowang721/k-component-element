@@ -6,7 +6,7 @@
 
 define(function (require) {
 
-    require('k-component/component!./k-item');
+    require('k-component/component!k-component-element/k-item');
 
     /**
      * KItem.js

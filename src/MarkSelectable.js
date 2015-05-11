@@ -6,8 +6,6 @@
 
 define(function (require) {
 
-    var $k = require('k-component/k');
-
     require('k-component/component!k-component-element/mark-selectable');
 
     /**
@@ -22,8 +20,8 @@ define(function (require) {
         initialize: function () {
             this.$super(arguments);
 
-            var el = $k.$(this.el);
-            this.selection = el.attr('selection');
+            var el = this.$(this.el);
+            this.selection = el.attr('selection') || '*';
             this.multi = el.attr('multi') != null;
             this.disabled = el.attr('disabled') != null;
 
@@ -35,7 +33,7 @@ define(function (require) {
          */
         bindEvents: function () {
             var me = this;
-            $k.$(me.host).on('click', me.selection, function (e) {
+            me.$(me.host).on('click', me.selection, function (e) {
                 if (e.target !== me.host) {
                     me.select(e.target);
                 }
@@ -49,16 +47,17 @@ define(function (require) {
          */
         select: function (target) {
             var me = this;
-            target = $k.$(target);
+            target = me.$(target);
+            var host = me.$(me.host);
             if (!me.disabled) {
                 if (me.multi) {
                     target.toggleClass('selected');
-                    $k.$(me.host).trigger('select');
+                    host.trigger('select');
                 }
                 else if (!target.hasClass('selected')) {
-                    $k.$(me.getSelected()).removeClass('selected');
+                    me.$(me.getSelected()).removeClass('selected');
                     target.addClass('selected');
-                    $k.$(me.host).trigger('select');
+                    host.trigger('select');
                 }
             }
         },
@@ -80,7 +79,7 @@ define(function (require) {
         },
 
         getSelection: function () {
-            return $k.$(this.host).find(this.selection);
+            return this.$(this.host).find(this.selection);
         },
 
         getSelected: function () {

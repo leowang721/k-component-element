@@ -6,8 +6,6 @@
 
 define(function (require) {
 
-    var $k = require('k-component/k');
-
     require('./MarkSelectable');
     require('k-component/component!k-component-element/k-selection');
 
@@ -27,7 +25,7 @@ define(function (require) {
          * 初始化行为，例如 model 的初始化、自身实例事件处理等
          */
         initBehavior: function () {
-            var el = $k.$(this.el);
+            var el = this.$(this.el);
             this.$('mark-selectable')
                 .attr('multi', el.attr('multi'))
                 .attr('disabled', el.attr('disabled'));

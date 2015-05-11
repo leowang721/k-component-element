@@ -6,7 +6,7 @@
 
 define(function (require) {
 
-    require('k-component/component!./k-menu');
+    require('k-component/component!k-component-element/k-menu');
     require('./KItem');
 
     /**

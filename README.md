@@ -3,18 +3,27 @@ component element based on k-component
 
 this is a set of defined basic component elements that we can use directly.
 
-## 引用方式
+## Demo Online
+[Demo Online](http://leowang721.github.io/k-component-element/preview/index.html)
 
-可直接使用 `require('k-component/component!k-component-element/some-element');` 的方式
-也可以 `require('k-component-element/SomeElement')`
+## require element
 
-前者建议项目模式下使用
-后者建议开发 element 时使用以便避免按需加载顺序问题
+```javascript
+require('k-component/component!k-component-element/some-element');
+// or
+require('k-component-element/SomeElement');
+```
+Then we can use custom element as HTMLElement.
 
-## 介绍
-主旨是创建一系列自定义的 Element 来使用
+[Try](http://leowang721.github.io/k-component-element/preview/index.html)
 
-## 使用
-
-$k(query|element)，可用于获取 component
-$k.$，可用于穿透 shadowDOM 的获取元素
+## about $k
+```javascript
+var a = $k(query|element);  // get a instance which can handle component's Action
+a.ready(method);  // when component is ready, do method
+a.on('eventName', method);  // when component is ready, bind event
+```
+## about $k.$
+```javascript
+$k.$(query|element);  // is zepto selector, but it can get elements in shadow root
+```

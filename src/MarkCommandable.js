@@ -26,7 +26,7 @@ define(function (require) {
 
             this.$super(arguments);
 
-            this.type = $k.$(this.el).attr('event-type');
+            this.type = this.$(this.el).attr('event-type');
             // 只支持配置好的事件类型
             if (_.indexOf(this.supportedEvent, this.type) === -1) {
                 this.type = 'click';
@@ -37,7 +37,10 @@ define(function (require) {
          * 事件绑定处理，直接使用 DOM 行为即可
          */
         bindEvents: function () {
-            $k.$(this.host).on(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            this.$(this.host).on(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            if (this.el === this.content) {  // support shadow root
+                this.$(this.host.shadowRoot).on(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            }
         },
 
         /**
@@ -50,7 +53,7 @@ define(function (require) {
         attributes: {},
 
         executeCommand: function (e) {
-            var target = $k.$(e.target);
+            var target = this.$(e.target);
             var type = target.attr('data-command');
             var args = target.attr('data-command-args');
 
@@ -59,11 +62,11 @@ define(function (require) {
             }
             catch (e) {}
 
-            $k.$(this.host).trigger('command', {
+            this.$(this.host).trigger('command', {
                 type: type,
                 args: args
             });
-            $k.$(this.host).trigger('command:' + type, args);
+            this.$(this.host).trigger('command:' + type, args);
 
             e.preventDefault();
             e.stopPropagation();
@@ -73,7 +76,7 @@ define(function (require) {
          * 销毁处理
          */
         dispose: function () {
-            $k.$(this.host).off(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            this.$(this.host).off(this.type, '[data-command]', _.bind(this.executeCommand, this));
             this.$super(arguments);
         }
     };

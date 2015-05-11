@@ -1,6 +1,6 @@
 {
     "name": "k-component-element",
-    "version": "0.0.1-alpha.2",
+    "version": "0.0.1-alpha.3",
     "author": {
       "name": "Leo Wang",
       "email": "leowang721@gmail.com",
@@ -8,7 +8,7 @@
     },
     "contributors": [],
     "dependencies": {
-        "k-component": "~0.0.1-alpha.1"
+        "k-component": "~0.0.1-alpha.10"
     },
     "main": "main",
     "description": "component element based on k-component",
