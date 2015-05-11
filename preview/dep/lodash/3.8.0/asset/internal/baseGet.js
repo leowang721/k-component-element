@@ -1,0 +1,17 @@
+define('lodash/internal/baseGet', ['./toObject'], function (toObject) {
+    var undefined;
+    function baseGet(object, path, pathKey) {
+        if (object == null) {
+            return;
+        }
+        if (pathKey !== undefined && pathKey in toObject(object)) {
+            path = [pathKey];
+        }
+        var index = -1, length = path.length;
+        while (object != null && ++index < length) {
+            object = object[path[index]];
+        }
+        return index && index == length ? object : undefined;
+    }
+    return baseGet;
+});

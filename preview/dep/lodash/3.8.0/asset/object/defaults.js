@@ -1,0 +1,16 @@
+define('lodash/object/defaults', [
+    './assign',
+    '../internal/assignDefaults',
+    '../function/restParam'
+], function (assign, assignDefaults, restParam) {
+    var undefined;
+    var defaults = restParam(function (args) {
+            var object = args[0];
+            if (object == null) {
+                return object;
+            }
+            args.push(assignDefaults);
+            return assign.apply(undefined, args);
+        });
+    return defaults;
+});

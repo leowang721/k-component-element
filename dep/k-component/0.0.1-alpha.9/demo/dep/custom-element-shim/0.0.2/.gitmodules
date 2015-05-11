@@ -1,3 +1,0 @@
-[submodule "dep/es5-shim"]
-	path = dep/es5-shim
-	url = https://github.com/leowang721/es5-shim.git
