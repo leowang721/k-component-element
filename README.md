@@ -21,7 +21,7 @@
 
 有两种加载方式：
 
-1) 使用k-component 提供的 AMD 插件直接加载.component.html
+1. 使用k-component 提供的 AMD 插件直接加载.component.html
 
 ```javascript
 require('k-component/component!k-component-element/some-element');
