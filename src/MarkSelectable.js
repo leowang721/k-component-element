@@ -26,6 +26,7 @@ define(function (require) {
             this.disabled = el.attr('disabled') != null;
 
             this.host.selection = this;
+            this.$(this.getSelected()).addClass('selected');
         },
 
         /**
@@ -33,7 +34,7 @@ define(function (require) {
          */
         bindEvents: function () {
             var me = this;
-            me.$(me.host).on('click', me.selection, function (e) {
+            me.$host.on('mousedown', me.selection, function (e) {
                 if (e.target !== me.host) {
                     me.select(e.target);
                 }
@@ -48,17 +49,23 @@ define(function (require) {
         select: function (target) {
             var me = this;
             target = me.$(target);
-            var host = me.$(me.host);
-            if (!me.disabled) {
-                if (me.multi) {
-                    target.toggleClass('selected');
-                    host.trigger('select');
+
+            if (me.disabled) {
+                return;
+            }
+            if (me.multi) {
+                if (target.attr('selected') != null) {
+                    target.attr('selected', null).removeClass('selected');
                 }
-                else if (!target.hasClass('selected')) {
-                    me.$(me.getSelected()).removeClass('selected');
-                    target.addClass('selected');
-                    host.trigger('select');
+                else {
+                    target.attr('selected', '').addClass('selected');
                 }
+                me.$(me.host).trigger('select');
+            }
+            else if (target.attr('selected') == null) {
+                me.$(me.getSelected()).attr('selected', null).removeClass('selected');
+                target.attr('selected', '').addClass('selected');
+                me.$(me.host).trigger('select');
             }
         },
 
@@ -83,7 +90,7 @@ define(function (require) {
         },
 
         getSelected: function () {
-            var result = this.getSelection().filter('.selected');
+            var result = this.getSelection().filter('[selected]');
             return this.multi ? result : result[0];
         },
 

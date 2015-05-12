@@ -17,6 +17,8 @@ define(function (require) {
          */
         initialize: function () {
 
+            this.$(this.el).attr('hidden', '');
+
             // 查询 host
             var parent = this.el.parentNode;
 
@@ -37,6 +39,16 @@ define(function (require) {
              * @property {HTMLElement} host 宿主元素
              */
             this.host = parent;
+
+            /**
+             * @property {Zepto} $host 用于绑定事件的宿主 Zepto 对象
+             */
+            if (this.el === this.content && this.host.shadowRoot) {  // support shadow root
+                this.$host = this.$(this.host.shadowRoot);
+            }
+            else {
+                this.$host = this.$(this.host);
+            }
         }
     };
 

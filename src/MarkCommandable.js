@@ -37,10 +37,7 @@ define(function (require) {
          * 事件绑定处理，直接使用 DOM 行为即可
          */
         bindEvents: function () {
-            this.$(this.host).on(this.type, '[data-command]', _.bind(this.executeCommand, this));
-            if (this.el === this.content) {  // support shadow root
-                this.$(this.host.shadowRoot).on(this.type, '[data-command]', _.bind(this.executeCommand, this));
-            }
+            this.$host.on(this.type, _.bind(this.executeCommand, this));
         },
 
         /**
@@ -57,26 +54,30 @@ define(function (require) {
             var type = target.attr('data-command');
             var args = target.attr('data-command-args');
 
+            if (type == null) {
+                return;
+            }
+
             try {
                 args = JSON.parse(args);
             }
             catch (e) {}
 
-            this.$(this.host).trigger('command', {
+            this.$host.trigger('command', {
                 type: type,
                 args: args
             });
-            this.$(this.host).trigger('command:' + type, args);
+            this.$host.trigger('command:' + type, args);
 
             e.preventDefault();
-            e.stopPropagation();
+            // e.stopPropagation();
         },
 
         /**
          * 销毁处理
          */
         dispose: function () {
-            this.$(this.host).off(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            this.$host.off(this.type, '[data-command]', _.bind(this.executeCommand, this));
             this.$super(arguments);
         }
     };
