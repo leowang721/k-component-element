@@ -7,13 +7,17 @@
 define(function (require) {
 
     var _ = require('lodash');
-    var Promise = require('fc-core/Promise');
 
     require('./MarkCommandable');
     require('./KSelection');
     require('./KItem');
 
     require('k-component/component!./k-submenu');
+
+    // TODO:
+    // 1. 增加动画效果
+    // 2. 多个submenu的单展开
+    // 3. 样式的内嵌化，如果解决当前的.shadow 和 Normal样式并存的问题，这会导致以后的升级不便（可以考虑默认提供个 less 类？？）
 
     /**
      * KSubmenu.js
