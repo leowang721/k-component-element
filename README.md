@@ -20,18 +20,20 @@
 ## 加载自定义元素
 
 有两种加载方式：
-1. 使用k-component 提供的 AMD 插件直接加载.component.html
+
+1) 使用k-component 提供的 AMD 插件直接加载.component.html
 
 ```javascript
 require('k-component/component!k-component-element/some-element');
 ```
 
-2. 直接AMD加载对应的 Action 文件
+2) 直接AMD加载对应的 Action 文件
 ```javascript
 require('k-component-element/SomeElement');
 ```
 
 加载方式的区别：
+
 1. 可起到自动的按需加载的效果，使页面加载碎片化，但是可能会触犯加载顺序问题
 2. 不会触犯加载顺序问题，能够控制顺序以及进行自动合并
 
