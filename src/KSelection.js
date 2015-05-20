@@ -25,10 +25,9 @@ define(function (require) {
          * 初始化行为，例如 model 的初始化、自身实例事件处理等
          */
         initBehavior: function () {
-            var el = this.$(this.el);
             this.$('mark-selectable')
-                .attr('multi', el.attr('multi'))
-                .attr('disabled', el.attr('disabled'));
+                .attr('multi', this.el.attr('multi'))
+                .attr('disabled', this.el.attr('disabled'));
         },
 
         /**
@@ -55,7 +54,7 @@ define(function (require) {
          */
         select: function (element) {
             if (element) {
-                this.el.selection.select(element);
+                this.el[0].selection.select(element);
             }
         },
 

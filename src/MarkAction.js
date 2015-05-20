@@ -17,10 +17,10 @@ define(function (require) {
          */
         initialize: function () {
 
-            this.$(this.el).attr('hidden', '');
+            this.el.attr('hidden', '');
 
             // 查询 host
-            var parent = this.el.parentNode;
+            var parent = this.el.parent()[0];
 
             // 如果 parent 是 content，则向上一层
             if (parent.tagName && parent.tagName.toLowerCase() === 'content') {
@@ -28,8 +28,10 @@ define(function (require) {
             }
 
             // 如果parent是shadowRoot，则穿透到其 host 上
+            var hasGoneThrough = false;
             if (parent.host) {
                 parent = parent.host;
+                hasGoneThrough = true;
             }
             else if (parent.tagName.toLowerCase() === 'fake-shadow-root') {
                 parent = parent.parentNode;
@@ -38,16 +40,16 @@ define(function (require) {
             /**
              * @property {HTMLElement} host 宿主元素
              */
-            this.host = parent;
+            this.host = this.$(parent);
 
             /**
              * @property {Zepto} $host 用于绑定事件的宿主 Zepto 对象
              */
-            if (this.el === this.content && this.host.shadowRoot) {  // support shadow root
-                this.$host = this.$(this.host.shadowRoot);
+            if (hasGoneThrough) {  // support shadow root
+                this.$host = this.$(parent.shadowRoot);
             }
             else {
-                this.$host = this.$(this.host);
+                this.$host = this.host;
             }
         }
     };

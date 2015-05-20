@@ -7,7 +7,6 @@
 define(function (require) {
 
     var _ = require('lodash');
-    var $k = require('k-component/k');
 
     require('k-component/component!k-component-element/mark-commandable');
 
@@ -17,7 +16,7 @@ define(function (require) {
      */
     var overrides = {
 
-        supportedEvent: ['click', 'mousedown', 'mouseup'],
+        supportedEvent: ['click', 'mousedown', 'mouseup', 'mouseover', 'mouseout'],
 
         /**
          * 初始化，可用于调整 DOM 结构
@@ -26,18 +25,28 @@ define(function (require) {
 
             this.$super(arguments);
 
-            this.type = this.$(this.el).attr('event-type');
-            // 只支持配置好的事件类型
-            if (_.indexOf(this.supportedEvent, this.type) === -1) {
-                this.type = 'click';
-            }
+            this.type = _.trim(this.el.attr('event-type')) || 'mousedown';
+            this.handler = _.bind(this.executeCommand, this);
         },
 
         /**
          * 事件绑定处理，直接使用 DOM 行为即可
          */
         bindEvents: function () {
-            this.$host.on(this.type, _.bind(this.executeCommand, this));
+            var me = this;
+
+            // 只支持配置好的事件类型
+            if (_.indexOf(me.supportedEvent, me.type) !== -1) {
+                me.$host.on(me.type, me.handler);
+            }
+        },
+
+        /**
+         * 解绑事件
+         */
+        unbindEvents: function () {
+            var me = this;
+            me.$host.off(me.type, me.handler);
         },
 
         /**
@@ -47,14 +56,22 @@ define(function (require) {
          *
          * @type {Object}
          */
-        attributes: {},
+        attributes: {
+            'event-type': function (newVal) {
+                var me = this;
+                me.unbindEvents();
+                me.type = _.trim(newVal) || 'mousedown';
+                me.bindEvents();
+            }
+        },
 
         executeCommand: function (e) {
             var target = this.$(e.target);
-            var type = target.attr('data-command');
+            var command = target.attr('data-command');
             var args = target.attr('data-command-args');
+            var trigger = target.attr('data-command-trigger');
 
-            if (type == null) {
+            if (command == null && (trigger && _.trim(trigger) !== this.type)) {
                 return;
             }
 
@@ -63,11 +80,11 @@ define(function (require) {
             }
             catch (e) {}
 
-            this.$host.trigger('command', {
-                type: type,
+            this.host.trigger('command', {
+                command: command,
                 args: args
             });
-            this.$host.trigger('command:' + type, args);
+            this.host.triggerHandler('command:' + command, args);
 
             e.preventDefault();
             // e.stopPropagation();
@@ -77,7 +94,8 @@ define(function (require) {
          * 销毁处理
          */
         dispose: function () {
-            this.$host.off(this.type, '[data-command]', _.bind(this.executeCommand, this));
+            var me = this;
+            me.unbindEvents();
             this.$super(arguments);
         }
     };

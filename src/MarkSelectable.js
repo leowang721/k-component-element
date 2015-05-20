@@ -20,12 +20,11 @@ define(function (require) {
         initialize: function () {
             this.$super(arguments);
 
-            var el = this.$(this.el);
-            this.selection = el.attr('selection') || '*';
-            this.multi = el.attr('multi') != null;
-            this.disabled = el.attr('disabled') != null;
+            this.selection = this.el.attr('selection') || '*';
+            this.multi = this.el.attr('multi') != null;
+            this.disabled = this.el.attr('disabled') != null;
 
-            this.host.selection = this;
+            this.host[0].selection = this;
             this.$(this.getSelected()).addClass('selected');
         },
 

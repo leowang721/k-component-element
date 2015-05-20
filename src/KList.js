@@ -19,11 +19,11 @@ define(function (require) {
          */
         initialize: function () {
             // 自动生成 renderer
-            this.content.innerHTML = [
+            this.content.html([
                 '<!-- for: ${list} as ${item}, ${index} -->',
-                this.content.innerHTML,
+                this.content.html(),
                 '<!-- /for -->'
-            ].join('\n');
+            ].join('\n'));
         },
 
         /**
@@ -31,7 +31,7 @@ define(function (require) {
          */
         bindEvents: function () {
             var me = this;
-            me.model.on('change:list', me.render, me);
+            me.data.on('change:list', me.render, me);
         },
 
         /**
@@ -44,11 +44,13 @@ define(function (require) {
         attributes: {},
 
         setList: function (list) {
-            this.model.set('list', list);
+            // this.model.set('list', list);
+            this.data.set('list', list);
         },
 
         getList: function () {
-            return this.model.get('list');
+            // return this.model.get('list');
+            return this.data.get('list');
         },
 
         /**

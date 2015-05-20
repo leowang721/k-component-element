@@ -29,11 +29,12 @@ define(function (require) {
          * 初始化，可用于调整 DOM 结构
          */
         initialize: function () {
-            var el = this.$(this.el);
-            this.label = el.attr('label');
+            this.label = this.el.attr('label');
+            this.trigger = this.el.attr('trigger') || 'mousedown';
             if (this.label) {
                 this.$('.label').html(this.label);
             }
+            this.$('mark-commandable').attr('event-type', this.trigger);
         },
 
         /**
@@ -46,16 +47,12 @@ define(function (require) {
          */
         bindEvents: function () {
             var me = this;
-            var el = me.$(me.el);
             var list = me.$('.list');
-            el.on('command:toggle-list', function () {
+            me.el.on('command:toggle-list', function () {
                 var isHidden = list.attr('hidden');
-                if (isHidden) {
-                    list.attr('hidden', null);
-                }
-                else {
-                    list.attr('hidden', '');
-                }
+                // 先 trigger 事件
+                me.el.trigger(isHidden ? 'open' : 'hide');
+                me.el.attr('actived', isHidden ? '' : null);
             });
         },
 
@@ -66,7 +63,17 @@ define(function (require) {
          *
          * @type {Object}
          */
-        attributes: {},
+        attributes: {
+            'actived': function (newVal) {
+                var list = this.$('.list');
+                if (newVal != null) {
+                    list.attr('hidden', null);
+                }
+                else {
+                    list.attr('hidden', '');
+                }
+            }
+        },
 
         /**
          * 销毁处理

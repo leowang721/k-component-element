@@ -23,7 +23,15 @@ define(function (require) {
         /**
          * 事件绑定处理，直接使用 DOM 行为即可
          */
-        bindEvents: function () {},
+        bindEvents: function () {
+            var me = this;
+            var el = me.$(me.el);
+            var content = me.$(me.content);
+
+            content.children().on('open', function () {
+                content.children().filter('k-submenu[actived]').attr('actived', null);
+            });
+        },
 
         /**
          * 属性监听配置
