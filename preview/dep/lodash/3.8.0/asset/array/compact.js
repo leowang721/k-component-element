@@ -1,13 +1,2 @@
-define('lodash/array/compact', [], function () {
-    function compact(array) {
-        var index = -1, length = array ? array.length : 0, resIndex = -1, result = [];
-        while (++index < length) {
-            var value = array[index];
-            if (value) {
-                result[++resIndex] = value;
-            }
-        }
-        return result;
-    }
-    return compact;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/compact",[],function(){function e(e){for(var t=-1,n=e?e.length:0,r=-1,i=[];++t<n;){var o=e[t];if(o)i[++r]=o}return i}return e});

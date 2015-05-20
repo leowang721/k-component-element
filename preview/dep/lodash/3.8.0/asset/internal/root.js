@@ -1,13 +1,2 @@
-define('lodash/internal/root', [], function () {
-    var objectTypes = {
-            'function': true,
-            'object': true
-        };
-    var freeExports = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
-    var freeModule = objectTypes[typeof module] && module && !module.nodeType && module;
-    var freeGlobal = freeExports && freeModule && typeof global == 'object' && global && global.Object && global;
-    var freeSelf = objectTypes[typeof self] && self && self.Object && self;
-    var freeWindow = objectTypes[typeof window] && window && window.Object && window;
-    var root = freeGlobal || freeWindow !== (this && this.window) && freeWindow || freeSelf || this;
-    return root;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/root",[],function(){var e={"function":!0,object:!0},t=e[typeof exports]&&exports&&!exports.nodeType&&exports,n=e[typeof module]&&module&&!module.nodeType&&module,r=t&&n&&"object"==typeof global&&global&&global.Object&&global,i=e[typeof self]&&self&&self.Object&&self,o=e[typeof window]&&window&&window.Object&&window,a=r||o!==(this&&this.window)&&o||i||this;return a});

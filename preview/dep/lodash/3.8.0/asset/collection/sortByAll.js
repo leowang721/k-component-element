@@ -1,18 +1,2 @@
-define('lodash/collection/sortByAll', [
-    '../internal/baseFlatten',
-    '../internal/baseSortByOrder',
-    '../internal/isIterateeCall',
-    '../function/restParam'
-], function (baseFlatten, baseSortByOrder, isIterateeCall, restParam) {
-    var sortByAll = restParam(function (collection, iteratees) {
-            if (collection == null) {
-                return [];
-            }
-            var guard = iteratees[2];
-            if (guard && isIterateeCall(iteratees[0], iteratees[1], guard)) {
-                iteratees.length = 1;
-            }
-            return baseSortByOrder(collection, baseFlatten(iteratees), []);
-        });
-    return sortByAll;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/sortByAll",["../internal/baseFlatten","../internal/baseSortByOrder","../internal/isIterateeCall","../function/restParam"],function(e,t,n,r){var i=r(function(r,i){if(null==r)return[];var o=i[2];if(o&&n(i[0],i[1],o))i.length=1;return t(r,e(i),[])});return i});

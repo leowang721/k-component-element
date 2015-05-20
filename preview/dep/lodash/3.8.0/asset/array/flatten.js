@@ -1,13 +1,2 @@
-define('lodash/array/flatten', [
-    '../internal/baseFlatten',
-    '../internal/isIterateeCall'
-], function (baseFlatten, isIterateeCall) {
-    function flatten(array, isDeep, guard) {
-        var length = array ? array.length : 0;
-        if (guard && isIterateeCall(array, isDeep, guard)) {
-            isDeep = false;
-        }
-        return length ? baseFlatten(array, isDeep) : [];
-    }
-    return flatten;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/flatten",["../internal/baseFlatten","../internal/isIterateeCall"],function(e,t){function n(n,r,i){var o=n?n.length:0;if(i&&t(n,r,i))r=!1;return o?e(n,r):[]}return n});

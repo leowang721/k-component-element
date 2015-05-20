@@ -1,15 +1,2 @@
-define('lodash/internal/createFindIndex', [
-    './baseCallback',
-    './baseFindIndex'
-], function (baseCallback, baseFindIndex) {
-    function createFindIndex(fromRight) {
-        return function (array, predicate, thisArg) {
-            if (!(array && array.length)) {
-                return -1;
-            }
-            predicate = baseCallback(predicate, thisArg, 3);
-            return baseFindIndex(array, predicate, fromRight);
-        };
-    }
-    return createFindIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createFindIndex",["./baseCallback","./baseFindIndex"],function(e,t){function n(n){return function(r,i,o){if(!r||!r.length)return-1;else return i=e(i,o,3),t(r,i,n)}}return n});

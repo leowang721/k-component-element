@@ -1,11 +1,2 @@
-define('lodash/array/difference', [
-    '../internal/baseDifference',
-    '../internal/baseFlatten',
-    '../internal/isArrayLike',
-    '../function/restParam'
-], function (baseDifference, baseFlatten, isArrayLike, restParam) {
-    var difference = restParam(function (array, values) {
-            return isArrayLike(array) ? baseDifference(array, baseFlatten(values, false, true)) : [];
-        });
-    return difference;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/difference",["../internal/baseDifference","../internal/baseFlatten","../internal/isArrayLike","../function/restParam"],function(e,t,n,r){var i=r(function(r,i){return n(r)?e(r,t(i,!1,!0)):[]});return i});

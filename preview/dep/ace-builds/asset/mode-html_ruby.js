@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/mode/css_highlight_rules', [
     'require',
     'exports',

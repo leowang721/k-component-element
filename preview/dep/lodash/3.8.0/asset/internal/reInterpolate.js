@@ -1,4 +1,2 @@
-define('lodash/internal/reInterpolate', [], function () {
-    var reInterpolate = /<%=([\s\S]+?)%>/g;
-    return reInterpolate;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/reInterpolate",[],function(){var e=/<%=([\s\S]+?)%>/g;return e});

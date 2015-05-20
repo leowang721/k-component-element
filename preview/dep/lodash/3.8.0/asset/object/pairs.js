@@ -1,14 +1,2 @@
-define('lodash/object/pairs', ['./keys'], function (keys) {
-    function pairs(object) {
-        var index = -1, props = keys(object), length = props.length, result = Array(length);
-        while (++index < length) {
-            var key = props[index];
-            result[index] = [
-                key,
-                object[key]
-            ];
-        }
-        return result;
-    }
-    return pairs;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/pairs",["./keys"],function(e){function n(n){for(var t=-1,r=e(n),i=r.length,o=Array(i);++t<i;){var a=r[t];o[t]=[a,n[a]]}return o}return n});

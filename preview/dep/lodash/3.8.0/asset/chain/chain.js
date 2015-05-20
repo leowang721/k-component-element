@@ -1,8 +1,2 @@
-define('lodash/chain/chain', ['./lodash'], function (lodash) {
-    function chain(value) {
-        var result = lodash(value);
-        result.__chain__ = true;
-        return result;
-    }
-    return chain;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/chain",["./lodash"],function(e){function t(t){var n=e(t);return n.__chain__=!0,n}return t});

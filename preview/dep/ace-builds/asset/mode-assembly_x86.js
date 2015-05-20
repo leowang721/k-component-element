@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/mode/assembly_x86_highlight_rules', [
     'require',
     'exports',

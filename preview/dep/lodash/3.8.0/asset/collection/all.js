@@ -1,3 +1,2 @@
-define('lodash/collection/all', ['./every'], function (every) {
-    return every;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/all",["./every"],function(e){return e});

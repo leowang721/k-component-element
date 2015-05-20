@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/mode/xquery/jsoniq_lexer', [
     'require',
     'exports',

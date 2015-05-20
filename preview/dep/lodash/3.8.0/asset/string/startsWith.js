@@ -1,9 +1,2 @@
-define('lodash/string/startsWith', ['../internal/baseToString'], function (baseToString) {
-    var nativeMin = Math.min;
-    function startsWith(string, target, position) {
-        string = baseToString(string);
-        position = position == null ? 0 : nativeMin(position < 0 ? 0 : +position || 0, string.length);
-        return string.lastIndexOf(target, position) == position;
-    }
-    return startsWith;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/startsWith",["../internal/baseToString"],function(e){function n(n,r,i){return n=e(n),i=null==i?0:t(0>i?0:+i||0,n.length),n.lastIndexOf(r,i)==i}var t=Math.min;return n});

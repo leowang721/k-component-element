@@ -1,9 +1,2 @@
-define('lodash/object/functions', [
-    '../internal/baseFunctions',
-    './keysIn'
-], function (baseFunctions, keysIn) {
-    function functions(object) {
-        return baseFunctions(object, keysIn(object));
-    }
-    return functions;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/functions",["../internal/baseFunctions","./keysIn"],function(e,n){function t(t){return e(t,n(t))}return t});

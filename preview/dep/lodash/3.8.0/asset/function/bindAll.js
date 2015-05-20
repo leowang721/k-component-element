@@ -1,18 +1,2 @@
-define('lodash/function/bindAll', [
-    '../internal/baseFlatten',
-    '../internal/createWrapper',
-    '../object/functions',
-    './restParam'
-], function (baseFlatten, createWrapper, functions, restParam) {
-    var BIND_FLAG = 1;
-    var bindAll = restParam(function (object, methodNames) {
-            methodNames = methodNames.length ? baseFlatten(methodNames) : functions(object);
-            var index = -1, length = methodNames.length;
-            while (++index < length) {
-                var key = methodNames[index];
-                object[key] = createWrapper(object[key], BIND_FLAG, object);
-            }
-            return object;
-        });
-    return bindAll;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/bindAll",["../internal/baseFlatten","../internal/createWrapper","../object/functions","./restParam"],function(e,t,n,r){var i=1,o=r(function(r,o){o=o.length?e(o):n(r);for(var a=-1,s=o.length;++a<s;){var u=o[a];r[u]=t(r[u],i,r)}return r});return o});

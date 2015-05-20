@@ -1,9 +1,2 @@
-define('lodash/object/values', [
-    '../internal/baseValues',
-    './keys'
-], function (baseValues, keys) {
-    function values(object) {
-        return baseValues(object, keys(object));
-    }
-    return values;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/values",["../internal/baseValues","./keys"],function(e,n){function t(t){return e(t,n(t))}return t});

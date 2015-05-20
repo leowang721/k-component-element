@@ -1,13 +1,2 @@
-define('lodash/internal/initCloneArray', [], function () {
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    function initCloneArray(array) {
-        var length = array.length, result = new array.constructor(length);
-        if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
-            result.index = array.index;
-            result.input = array.input;
-        }
-        return result;
-    }
-    return initCloneArray;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/initCloneArray",[],function(){function e(e){var t=e.length,r=new e.constructor(t);if(t&&"string"==typeof e[0]&&n.call(e,"index"))r.index=e.index,r.input=e.input;return r}var t=Object.prototype,n=t.hasOwnProperty;return e});

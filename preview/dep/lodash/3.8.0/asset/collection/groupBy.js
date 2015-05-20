@@ -1,12 +1,2 @@
-define('lodash/collection/groupBy', ['../internal/createAggregator'], function (createAggregator) {
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    var groupBy = createAggregator(function (result, value, key) {
-            if (hasOwnProperty.call(result, key)) {
-                result[key].push(value);
-            } else {
-                result[key] = [value];
-            }
-        });
-    return groupBy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/groupBy",["../internal/createAggregator"],function(e){var t=Object.prototype,n=t.hasOwnProperty,r=e(function(e,t,r){if(n.call(e,r))e[r].push(t);else e[r]=[t]});return r});

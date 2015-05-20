@@ -1,8 +1,2 @@
-define('lodash/collection/forEachRight', [
-    '../internal/arrayEachRight',
-    '../internal/baseEachRight',
-    '../internal/createForEach'
-], function (arrayEachRight, baseEachRight, createForEach) {
-    var forEachRight = createForEach(arrayEachRight, baseEachRight);
-    return forEachRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/forEachRight",["../internal/arrayEachRight","../internal/baseEachRight","../internal/createForEach"],function(e,t,n){var r=n(e,t);return r});

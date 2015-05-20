@@ -1,8 +1,2 @@
-define('lodash/internal/mapHas', [], function () {
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    function mapHas(key) {
-        return key != '__proto__' && hasOwnProperty.call(this.__data__, key);
-    }
-    return mapHas;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/mapHas",[],function(){function e(e){return"__proto__"!=e&&n.call(this.__data__,e)}var t=Object.prototype,n=t.hasOwnProperty;return e});

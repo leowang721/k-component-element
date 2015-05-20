@@ -1,9 +1,2 @@
-define('lodash/lang/toPlainObject', [
-    '../internal/baseCopy',
-    '../object/keysIn'
-], function (baseCopy, keysIn) {
-    function toPlainObject(value) {
-        return baseCopy(value, keysIn(value));
-    }
-    return toPlainObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/toPlainObject",["../internal/baseCopy","../object/keysIn"],function(e,t){function n(n){return e(n,t(n))}return n});

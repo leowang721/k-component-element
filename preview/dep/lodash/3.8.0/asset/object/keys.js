@@ -1,16 +1,2 @@
-define('lodash/object/keys', [
-    '../internal/isArrayLike',
-    '../lang/isNative',
-    '../lang/isObject',
-    '../internal/shimKeys'
-], function (isArrayLike, isNative, isObject, shimKeys) {
-    var nativeKeys = isNative(nativeKeys = Object.keys) && nativeKeys;
-    var keys = !nativeKeys ? shimKeys : function (object) {
-            var Ctor = object != null && object.constructor;
-            if (typeof Ctor == 'function' && Ctor.prototype === object || typeof object != 'function' && isArrayLike(object)) {
-                return shimKeys(object);
-            }
-            return isObject(object) ? nativeKeys(object) : [];
-        };
-    return keys;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/keys",["../internal/isArrayLike","../lang/isNative","../lang/isObject","../internal/shimKeys"],function(e,n,t,r){var i=n(i=Object.keys)&&i,o=!i?r:function(n){var o=null!=n&&n.constructor;if("function"==typeof o&&o.prototype===n||"function"!=typeof n&&e(n))return r(n);else return t(n)?i(n):[]};return o});

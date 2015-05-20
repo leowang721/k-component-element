@@ -1,26 +1,2 @@
-define('lodash/array/unzip', [
-    '../internal/arrayFilter',
-    '../internal/arrayMap',
-    '../internal/baseProperty',
-    '../internal/isArrayLike'
-], function (arrayFilter, arrayMap, baseProperty, isArrayLike) {
-    var nativeMax = Math.max;
-    function unzip(array) {
-        if (!(array && array.length)) {
-            return [];
-        }
-        var index = -1, length = 0;
-        array = arrayFilter(array, function (group) {
-            if (isArrayLike(group)) {
-                length = nativeMax(group.length, length);
-                return true;
-            }
-        });
-        var result = Array(length);
-        while (++index < length) {
-            result[index] = arrayMap(array, baseProperty(index));
-        }
-        return result;
-    }
-    return unzip;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/unzip",["../internal/arrayFilter","../internal/arrayMap","../internal/baseProperty","../internal/isArrayLike"],function(e,t,n,r){function i(i){if(!i||!i.length)return[];var a=-1,s=0;i=e(i,function(e){if(r(e))return s=o(e.length,s),!0;else return void 0});for(var u=Array(s);++a<s;)u[a]=t(i,n(a));return u}var o=Math.max;return i});

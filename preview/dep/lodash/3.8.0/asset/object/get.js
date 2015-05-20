@@ -1,11 +1,2 @@
-define('lodash/object/get', [
-    '../internal/baseGet',
-    '../internal/toPath'
-], function (baseGet, toPath) {
-    var undefined;
-    function get(object, path, defaultValue) {
-        var result = object == null ? undefined : baseGet(object, toPath(path), path + '');
-        return result === undefined ? defaultValue : result;
-    }
-    return get;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/get",["../internal/baseGet","../internal/toPath"],function(e,n){function t(t,i,o){var a=null==t?r:e(t,n(i),i+"");return a===r?o:a}var r;return t});

@@ -1,14 +1,2 @@
-define('lodash/internal/createPartial', [
-    './createWrapper',
-    './replaceHolders',
-    '../function/restParam'
-], function (createWrapper, replaceHolders, restParam) {
-    function createPartial(flag) {
-        var partialFunc = restParam(function (func, partials) {
-                var holders = replaceHolders(partials, partialFunc.placeholder);
-                return createWrapper(func, flag, null, partials, holders);
-            });
-        return partialFunc;
-    }
-    return createPartial;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createPartial",["./createWrapper","./replaceHolders","../function/restParam"],function(e,t,n){function r(r){var i=n(function(n,o){var a=t(o,i.placeholder);return e(n,r,null,o,a)});return i}return r});

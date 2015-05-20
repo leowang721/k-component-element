@@ -1,13 +1,2 @@
-define('lodash/internal/indexOfNaN', [], function () {
-    function indexOfNaN(array, fromIndex, fromRight) {
-        var length = array.length, index = fromIndex + (fromRight ? 0 : -1);
-        while (fromRight ? index-- : ++index < length) {
-            var other = array[index];
-            if (other !== other) {
-                return index;
-            }
-        }
-        return -1;
-    }
-    return indexOfNaN;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/indexOfNaN",[],function(){function e(e,t,n){for(var r=e.length,i=t+(n?0:-1);n?i--:++i<r;){var o=e[i];if(o!==o)return i}return-1}return e});

@@ -1,9 +1,2 @@
-define('lodash/lang/isNumber', ['../internal/isObjectLike'], function (isObjectLike) {
-    var numberTag = '[object Number]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isNumber(value) {
-        return typeof value == 'number' || isObjectLike(value) && objToString.call(value) == numberTag;
-    }
-    return isNumber;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isNumber",["../internal/isObjectLike"],function(e){function t(t){return"number"==typeof t||e(t)&&i.call(t)==n}var n="[object Number]",r=Object.prototype,i=r.toString;return t});

@@ -1,17 +1,2 @@
-define('css', [], {
-    load: function (resourceId, req, load, config) {
-        var link = document.createElement('link');
-        link.setAttribute('rel', 'stylesheet');
-        link.setAttribute('type', 'text/css');
-        link.setAttribute('href', req.toUrl(resourceId));
-        var parent = document.getElementsByTagName('head')[0] || document.body;
-        parent.appendChild(link);
-        parent = null;
-        link = null;
-        load(true);
-    }
-});
-
-
-/** d e f i n e */
-define('common/esl/css', ['css'], function (target) { return target; });
+/*! @2015 Leo Wang. All Rights Reserved */
+define("css",[],{load:function(e,n,t){var r=document.createElement("link");r.setAttribute("rel","stylesheet"),r.setAttribute("type","text/css"),r.setAttribute("href",n.toUrl(e));var i=document.getElementsByTagName("head")[0]||document.body;i.appendChild(r),i=null,r=null,t(!0)}}),define("common/esl/css",["css"],function(e){return e});

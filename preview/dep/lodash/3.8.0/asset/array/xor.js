@@ -1,17 +1,2 @@
-define('lodash/array/xor', [
-    '../internal/baseDifference',
-    '../internal/baseUniq',
-    '../internal/isArrayLike'
-], function (baseDifference, baseUniq, isArrayLike) {
-    function xor() {
-        var index = -1, length = arguments.length;
-        while (++index < length) {
-            var array = arguments[index];
-            if (isArrayLike(array)) {
-                var result = result ? baseDifference(result, array).concat(baseDifference(array, result)) : array;
-            }
-        }
-        return result ? baseUniq(result) : [];
-    }
-    return xor;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/xor",["../internal/baseDifference","../internal/baseUniq","../internal/isArrayLike"],function(e,t,n){function r(){for(var r=-1,i=arguments.length;++r<i;){var o=arguments[r];if(n(o))var a=a?e(a,o).concat(e(o,a)):o}return a?t(a):[]}return r});

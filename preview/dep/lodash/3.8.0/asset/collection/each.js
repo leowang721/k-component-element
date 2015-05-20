@@ -1,3 +1,2 @@
-define('lodash/collection/each', ['./forEach'], function (forEach) {
-    return forEach;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/each",["./forEach"],function(e){return e});

@@ -1,17 +1,2 @@
-define('lodash/array/fill', [
-    '../internal/baseFill',
-    '../internal/isIterateeCall'
-], function (baseFill, isIterateeCall) {
-    function fill(array, value, start, end) {
-        var length = array ? array.length : 0;
-        if (!length) {
-            return [];
-        }
-        if (start && typeof start != 'number' && isIterateeCall(array, value, start)) {
-            start = 0;
-            end = length;
-        }
-        return baseFill(array, value, start, end);
-    }
-    return fill;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/fill",["../internal/baseFill","../internal/isIterateeCall"],function(e,t){function n(n,r,i,o){var a=n?n.length:0;if(!a)return[];if(i&&"number"!=typeof i&&t(n,r,i))i=0,o=a;return e(n,r,i,o)}return n});

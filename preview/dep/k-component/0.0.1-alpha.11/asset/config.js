@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component/config",["require"],function(){var e={LOADER_FILE_SUFFIX:"component.html",REGISTER_TAG:"k-component",CACHED_ACTION_KEY:"$$_COMPONENT_ACTION_$$"};return e});

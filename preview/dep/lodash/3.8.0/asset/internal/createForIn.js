@@ -1,15 +1,2 @@
-define('lodash/internal/createForIn', [
-    './bindCallback',
-    '../object/keysIn'
-], function (bindCallback, keysIn) {
-    var undefined;
-    function createForIn(objectFunc) {
-        return function (object, iteratee, thisArg) {
-            if (typeof iteratee != 'function' || thisArg !== undefined) {
-                iteratee = bindCallback(iteratee, thisArg, 3);
-            }
-            return objectFunc(object, iteratee, keysIn);
-        };
-    }
-    return createForIn;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createForIn",["./bindCallback","../object/keysIn"],function(e,t){function n(n){return function(i,o,a){if("function"!=typeof o||a!==r)o=e(o,a,3);return n(i,o,t)}}var r;return n});

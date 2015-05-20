@@ -1,7 +1,2 @@
-define('lodash/internal/mapGet', [], function () {
-    var undefined;
-    function mapGet(key) {
-        return key == '__proto__' ? undefined : this.__data__[key];
-    }
-    return mapGet;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/mapGet",[],function(){function e(e){return"__proto__"==e?t:this.__data__[e]}var t;return e});

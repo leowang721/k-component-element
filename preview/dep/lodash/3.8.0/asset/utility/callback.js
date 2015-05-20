@@ -1,14 +1,2 @@
-define('lodash/utility/callback', [
-    '../internal/baseCallback',
-    '../internal/isIterateeCall',
-    '../internal/isObjectLike',
-    './matches'
-], function (baseCallback, isIterateeCall, isObjectLike, matches) {
-    function callback(func, thisArg, guard) {
-        if (guard && isIterateeCall(func, thisArg, guard)) {
-            thisArg = null;
-        }
-        return isObjectLike(func) ? matches(func) : baseCallback(func, thisArg);
-    }
-    return callback;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/callback",["../internal/baseCallback","../internal/isIterateeCall","../internal/isObjectLike","./matches"],function(e,n,t,r){function i(i,o,a){if(a&&n(i,o,a))o=null;return t(i)?r(i):e(i,o)}return i});

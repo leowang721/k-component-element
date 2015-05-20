@@ -1,13 +1,2 @@
-define('lodash/internal/arrayFilter', [], function () {
-    function arrayFilter(array, predicate) {
-        var index = -1, length = array.length, resIndex = -1, result = [];
-        while (++index < length) {
-            var value = array[index];
-            if (predicate(value, index, array)) {
-                result[++resIndex] = value;
-            }
-        }
-        return result;
-    }
-    return arrayFilter;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayFilter",[],function(){function e(e,t){for(var n=-1,r=e.length,i=-1,o=[];++n<r;){var a=e[n];if(t(a,n,e))o[++i]=a}return o}return e});

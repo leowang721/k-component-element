@@ -1,9 +1,2 @@
-define('lodash/lang/isBoolean', ['../internal/isObjectLike'], function (isObjectLike) {
-    var boolTag = '[object Boolean]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isBoolean(value) {
-        return value === true || value === false || isObjectLike(value) && objToString.call(value) == boolTag;
-    }
-    return isBoolean;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isBoolean",["../internal/isObjectLike"],function(e){function t(t){return t===!0||t===!1||e(t)&&i.call(t)==n}var n="[object Boolean]",r=Object.prototype,i=r.toString;return t});

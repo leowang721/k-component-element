@@ -1,22 +1,2 @@
-define('lodash/string/trim', [
-    '../internal/baseToString',
-    '../internal/charsLeftIndex',
-    '../internal/charsRightIndex',
-    '../internal/isIterateeCall',
-    '../internal/trimmedLeftIndex',
-    '../internal/trimmedRightIndex'
-], function (baseToString, charsLeftIndex, charsRightIndex, isIterateeCall, trimmedLeftIndex, trimmedRightIndex) {
-    function trim(string, chars, guard) {
-        var value = string;
-        string = baseToString(string);
-        if (!string) {
-            return string;
-        }
-        if (guard ? isIterateeCall(value, chars, guard) : chars == null) {
-            return string.slice(trimmedLeftIndex(string), trimmedRightIndex(string) + 1);
-        }
-        chars = chars + '';
-        return string.slice(charsLeftIndex(string, chars), charsRightIndex(string, chars) + 1);
-    }
-    return trim;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/trim",["../internal/baseToString","../internal/charsLeftIndex","../internal/charsRightIndex","../internal/isIterateeCall","../internal/trimmedLeftIndex","../internal/trimmedRightIndex"],function(e,n,t,r,i,o){function a(a,u,l){var c=a;if(a=e(a),!a)return a;if(l?r(c,u,l):null==u)return a.slice(i(a),o(a)+1);else return u+="",a.slice(n(a,u),t(a,u)+1)}return a});

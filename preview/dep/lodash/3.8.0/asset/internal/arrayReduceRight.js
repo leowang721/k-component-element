@@ -1,13 +1,2 @@
-define('lodash/internal/arrayReduceRight', [], function () {
-    function arrayReduceRight(array, iteratee, accumulator, initFromArray) {
-        var length = array.length;
-        if (initFromArray && length) {
-            accumulator = array[--length];
-        }
-        while (length--) {
-            accumulator = iteratee(accumulator, array[length], length, array);
-        }
-        return accumulator;
-    }
-    return arrayReduceRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayReduceRight",[],function(){function e(e,t,n,r){var i=e.length;if(r&&i)n=e[--i];for(;i--;)n=t(n,e[i],i,e);return n}return e});

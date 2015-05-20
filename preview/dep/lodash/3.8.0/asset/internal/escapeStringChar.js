@@ -1,14 +1,2 @@
-define('lodash/internal/escapeStringChar', [], function () {
-    var stringEscapes = {
-            '\\': '\\',
-            '\'': '\'',
-            '\n': 'n',
-            '\r': 'r',
-            '\u2028': 'u2028',
-            '\u2029': 'u2029'
-        };
-    function escapeStringChar(chr) {
-        return '\\' + stringEscapes[chr];
-    }
-    return escapeStringChar;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/escapeStringChar",[],function(){function e(e){return"\\"+t[e]}var t={"\\":"\\","'":"'","\n":"n","\r":"r","\u2028":"u2028","\u2029":"u2029"};return e});

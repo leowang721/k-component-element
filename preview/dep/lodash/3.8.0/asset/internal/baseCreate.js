@@ -1,18 +1,2 @@
-define('lodash/internal/baseCreate', [
-    '../lang/isObject',
-    './root'
-], function (isObject, root) {
-    var baseCreate = function () {
-            function Object() {
-            }
-            return function (prototype) {
-                if (isObject(prototype)) {
-                    Object.prototype = prototype;
-                    var result = new Object();
-                    Object.prototype = null;
-                }
-                return result || root.Object();
-            };
-        }();
-    return baseCreate;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseCreate",["../lang/isObject","./root"],function(e,t){var n=function(){function n(){}return function(r){if(e(r)){n.prototype=r;var i=new n;n.prototype=null}return i||t.Object()}}();return n});

@@ -1,7 +1,2 @@
-define('lodash/array/zip', [
-    '../function/restParam',
-    './unzip'
-], function (restParam, unzip) {
-    var zip = restParam(unzip);
-    return zip;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/zip",["../function/restParam","./unzip"],function(e,t){var n=e(t);return n});

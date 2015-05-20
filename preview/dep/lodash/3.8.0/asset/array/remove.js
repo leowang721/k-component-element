@@ -1,23 +1,2 @@
-define('lodash/array/remove', [
-    '../internal/baseCallback',
-    '../internal/basePullAt'
-], function (baseCallback, basePullAt) {
-    function remove(array, predicate, thisArg) {
-        var result = [];
-        if (!(array && array.length)) {
-            return result;
-        }
-        var index = -1, indexes = [], length = array.length;
-        predicate = baseCallback(predicate, thisArg, 3);
-        while (++index < length) {
-            var value = array[index];
-            if (predicate(value, index, array)) {
-                result.push(value);
-                indexes.push(index);
-            }
-        }
-        basePullAt(array, indexes);
-        return result;
-    }
-    return remove;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/remove",["../internal/baseCallback","../internal/basePullAt"],function(e,t){function n(n,r,i){var o=[];if(!n||!n.length)return o;var a=-1,s=[],u=n.length;for(r=e(r,i,3);++a<u;){var c=n[a];if(r(c,a,n))o.push(c),s.push(a)}return t(n,s),o}return n});

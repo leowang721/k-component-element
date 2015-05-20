@@ -1,3 +1,2 @@
-define('lodash/chain/toString', ['./wrapperToString'], function (wrapperToString) {
-    return wrapperToString;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/toString",["./wrapperToString"],function(e){return e});

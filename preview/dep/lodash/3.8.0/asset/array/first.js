@@ -1,7 +1,2 @@
-define('lodash/array/first', [], function () {
-    var undefined;
-    function first(array) {
-        return array ? array[0] : undefined;
-    }
-    return first;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/first",[],function(){function e(e){return e?e[0]:t}var t;return e});

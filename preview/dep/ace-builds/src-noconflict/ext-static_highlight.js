@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/ext/static_highlight",["require","exports","module","ace/edit_session","ace/layer/text","ace/config","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 

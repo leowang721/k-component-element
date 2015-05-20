@@ -1,17 +1,2 @@
-define('lodash/collection/invoke', [
-    '../internal/baseEach',
-    '../internal/invokePath',
-    '../internal/isArrayLike',
-    '../internal/isKey',
-    '../function/restParam'
-], function (baseEach, invokePath, isArrayLike, isKey, restParam) {
-    var invoke = restParam(function (collection, path, args) {
-            var index = -1, isFunc = typeof path == 'function', isProp = isKey(path), result = isArrayLike(collection) ? Array(collection.length) : [];
-            baseEach(collection, function (value) {
-                var func = isFunc ? path : isProp && value != null && value[path];
-                result[++index] = func ? func.apply(value, args) : invokePath(value, path, args);
-            });
-            return result;
-        });
-    return invoke;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/invoke",["../internal/baseEach","../internal/invokePath","../internal/isArrayLike","../internal/isKey","../function/restParam"],function(e,t,n,r,i){var o=i(function(i,o,a){var s=-1,u="function"==typeof o,c=r(o),l=n(i)?Array(i.length):[];return e(i,function(e){var n=u?o:c&&null!=e&&e[o];l[++s]=n?n.apply(e,a):t(e,o,a)}),l});return o});

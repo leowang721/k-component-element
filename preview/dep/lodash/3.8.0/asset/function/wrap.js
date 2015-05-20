@@ -1,11 +1,2 @@
-define('lodash/function/wrap', [
-    '../internal/createWrapper',
-    '../utility/identity'
-], function (createWrapper, identity) {
-    var PARTIAL_FLAG = 32;
-    function wrap(value, wrapper) {
-        wrapper = wrapper == null ? identity : wrapper;
-        return createWrapper(wrapper, PARTIAL_FLAG, null, [value], []);
-    }
-    return wrap;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/wrap",["../internal/createWrapper","../utility/identity"],function(e,t){function n(n,i){return i=null==i?t:i,e(i,r,null,[n],[])}var r=32;return n});

@@ -1,12 +1,2 @@
-define('lodash/function/spread', [], function () {
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    function spread(func) {
-        if (typeof func != 'function') {
-            throw new TypeError(FUNC_ERROR_TEXT);
-        }
-        return function (array) {
-            return func.apply(this, array);
-        };
-    }
-    return spread;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/spread",[],function(){function e(e){if("function"!=typeof e)throw new TypeError(t);return function(t){return e.apply(this,t)}}var t="Expected a function";return e});

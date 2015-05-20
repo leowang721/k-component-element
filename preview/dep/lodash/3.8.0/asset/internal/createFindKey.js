@@ -1,12 +1,2 @@
-define('lodash/internal/createFindKey', [
-    './baseCallback',
-    './baseFind'
-], function (baseCallback, baseFind) {
-    function createFindKey(objectFunc) {
-        return function (object, predicate, thisArg) {
-            predicate = baseCallback(predicate, thisArg, 3);
-            return baseFind(object, predicate, objectFunc, true);
-        };
-    }
-    return createFindKey;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createFindKey",["./baseCallback","./baseFind"],function(e,t){function n(n){return function(r,i,o){return i=e(i,o,3),t(r,i,n,!0)}}return n});

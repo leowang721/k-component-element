@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/mode/praat_highlight_rules', [
     'require',
     'exports',

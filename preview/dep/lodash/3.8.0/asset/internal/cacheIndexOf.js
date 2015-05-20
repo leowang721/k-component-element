@@ -1,7 +1,2 @@
-define('lodash/internal/cacheIndexOf', ['../lang/isObject'], function (isObject) {
-    function cacheIndexOf(cache, value) {
-        var data = cache.data, result = typeof value == 'string' || isObject(value) ? data.set.has(value) : data.hash[value];
-        return result ? 0 : -1;
-    }
-    return cacheIndexOf;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/cacheIndexOf",["../lang/isObject"],function(e){function t(t,n){var r=t.data,i="string"==typeof n||e(n)?r.set.has(n):r.hash[n];return i?0:-1}return t});

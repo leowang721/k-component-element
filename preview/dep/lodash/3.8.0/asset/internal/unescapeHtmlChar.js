@@ -1,14 +1,2 @@
-define('lodash/internal/unescapeHtmlChar', [], function () {
-    var htmlUnescapes = {
-            '&amp;': '&',
-            '&lt;': '<',
-            '&gt;': '>',
-            '&quot;': '"',
-            '&#39;': '\'',
-            '&#96;': '`'
-        };
-    function unescapeHtmlChar(chr) {
-        return htmlUnescapes[chr];
-    }
-    return unescapeHtmlChar;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/unescapeHtmlChar",[],function(){function e(e){return t[e]}var t={"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&#39;":"'","&#96;":"`"};return e});

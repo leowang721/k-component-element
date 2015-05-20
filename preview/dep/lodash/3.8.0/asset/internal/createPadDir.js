@@ -1,12 +1,2 @@
-define('lodash/internal/createPadDir', [
-    './baseToString',
-    './createPadding'
-], function (baseToString, createPadding) {
-    function createPadDir(fromRight) {
-        return function (string, length, chars) {
-            string = baseToString(string);
-            return (fromRight ? string : '') + createPadding(string, length, chars) + (fromRight ? '' : string);
-        };
-    }
-    return createPadDir;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createPadDir",["./baseToString","./createPadding"],function(e,t){function n(n){return function(r,i,o){return r=e(r),(n?r:"")+t(r,i,o)+(n?"":r)}}return n});

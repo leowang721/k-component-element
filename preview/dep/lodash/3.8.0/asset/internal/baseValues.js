@@ -1,10 +1,2 @@
-define('lodash/internal/baseValues', [], function () {
-    function baseValues(object, props) {
-        var index = -1, length = props.length, result = Array(length);
-        while (++index < length) {
-            result[index] = object[props[index]];
-        }
-        return result;
-    }
-    return baseValues;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseValues",[],function(){function e(e,t){for(var n=-1,r=t.length,i=Array(r);++n<r;)i[n]=e[t[n]];return i}return e});

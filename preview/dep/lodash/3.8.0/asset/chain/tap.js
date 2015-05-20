@@ -1,7 +1,2 @@
-define('lodash/chain/tap', [], function () {
-    function tap(value, interceptor, thisArg) {
-        interceptor.call(thisArg, value);
-        return value;
-    }
-    return tap;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/tap",[],function(){function e(e,t,n){return t.call(n,e),e}return e});

@@ -1,19 +1,2 @@
-define('lodash/chain/wrapperReverse', [
-    '../internal/LazyWrapper',
-    '../internal/LodashWrapper',
-    './thru'
-], function (LazyWrapper, LodashWrapper, thru) {
-    function wrapperReverse() {
-        var value = this.__wrapped__;
-        if (value instanceof LazyWrapper) {
-            if (this.__actions__.length) {
-                value = new LazyWrapper(this);
-            }
-            return new LodashWrapper(value.reverse(), this.__chain__);
-        }
-        return this.thru(function (value) {
-            return value.reverse();
-        });
-    }
-    return wrapperReverse;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/wrapperReverse",["../internal/LazyWrapper","../internal/LodashWrapper","./thru"],function(e,t){function n(){var n=this.__wrapped__;if(n instanceof e){if(this.__actions__.length)n=new e(this);return new t(n.reverse(),this.__chain__)}return this.thru(function(e){return e.reverse()})}return n});

@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 (function () {
     function o(n) {
         var i = e;

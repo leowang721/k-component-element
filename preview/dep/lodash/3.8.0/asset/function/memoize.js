@@ -1,21 +1,2 @@
-define('lodash/function/memoize', ['../internal/MapCache'], function (MapCache) {
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    function memoize(func, resolver) {
-        if (typeof func != 'function' || resolver && typeof resolver != 'function') {
-            throw new TypeError(FUNC_ERROR_TEXT);
-        }
-        var memoized = function () {
-            var args = arguments, cache = memoized.cache, key = resolver ? resolver.apply(this, args) : args[0];
-            if (cache.has(key)) {
-                return cache.get(key);
-            }
-            var result = func.apply(this, args);
-            cache.set(key, result);
-            return result;
-        };
-        memoized.cache = new memoize.Cache();
-        return memoized;
-    }
-    memoize.Cache = MapCache;
-    return memoize;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/memoize",["../internal/MapCache"],function(e){function t(e,r){if("function"!=typeof e||r&&"function"!=typeof r)throw new TypeError(n);var i=function(){var t=arguments,n=i.cache,o=r?r.apply(this,t):t[0];if(n.has(o))return n.get(o);var a=e.apply(this,t);return n.set(o,a),a};return i.cache=new t.Cache,i}var n="Expected a function";return t.Cache=e,t});

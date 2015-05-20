@@ -1,12 +1,2 @@
-define('lodash/internal/createForEach', [
-    './bindCallback',
-    '../lang/isArray'
-], function (bindCallback, isArray) {
-    var undefined;
-    function createForEach(arrayFunc, eachFunc) {
-        return function (collection, iteratee, thisArg) {
-            return typeof iteratee == 'function' && thisArg === undefined && isArray(collection) ? arrayFunc(collection, iteratee) : eachFunc(collection, bindCallback(iteratee, thisArg, 3));
-        };
-    }
-    return createForEach;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createForEach",["./bindCallback","../lang/isArray"],function(e,t){function n(n,i){return function(o,a,u){return"function"==typeof a&&u===r&&t(o)?n(o,a):i(o,e(a,u,3))}}var r;return n});

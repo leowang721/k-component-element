@@ -1,9 +1,2 @@
-define('lodash/internal/baseProperty', [], function () {
-    var undefined;
-    function baseProperty(key) {
-        return function (object) {
-            return object == null ? undefined : object[key];
-        };
-    }
-    return baseProperty;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseProperty",[],function(){function e(e){return function(n){return null==n?t:n[e]}}var t;return e});

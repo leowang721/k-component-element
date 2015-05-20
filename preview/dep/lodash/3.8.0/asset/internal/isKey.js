@@ -1,18 +1,2 @@
-define('lodash/internal/isKey', [
-    '../lang/isArray',
-    './toObject'
-], function (isArray, toObject) {
-    var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\n\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
-    function isKey(value, object) {
-        var type = typeof value;
-        if (type == 'string' && reIsPlainProp.test(value) || type == 'number') {
-            return true;
-        }
-        if (isArray(value)) {
-            return false;
-        }
-        var result = !reIsDeepProp.test(value);
-        return result || object != null && value in toObject(object);
-    }
-    return isKey;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isKey",["../lang/isArray","./toObject"],function(e,t){function n(n,o){var a=typeof n;if("string"==a&&i.test(n)||"number"==a)return!0;if(e(n))return!1;var u=!r.test(n);return u||null!=o&&n in t(o)}var r=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\n\\]|\\.)*?\1)\]/,i=/^\w*$/;return n});

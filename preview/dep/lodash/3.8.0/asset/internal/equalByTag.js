@@ -1,19 +1,2 @@
-define('lodash/internal/equalByTag', [], function () {
-    var boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', numberTag = '[object Number]', regexpTag = '[object RegExp]', stringTag = '[object String]';
-    function equalByTag(object, other, tag) {
-        switch (tag) {
-        case boolTag:
-        case dateTag:
-            return +object == +other;
-        case errorTag:
-            return object.name == other.name && object.message == other.message;
-        case numberTag:
-            return object != +object ? other != +other : object == +other;
-        case regexpTag:
-        case stringTag:
-            return object == other + '';
-        }
-        return false;
-    }
-    return equalByTag;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/equalByTag",[],function(){function e(e,u,s){switch(s){case t:case n:return+e==+u;case r:return e.name==u.name&&e.message==u.message;case i:return e!=+e?u!=+u:e==+u;case o:case a:return e==u+""}return!1}var t="[object Boolean]",n="[object Date]",r="[object Error]",i="[object Number]",o="[object RegExp]",a="[object String]";return e});

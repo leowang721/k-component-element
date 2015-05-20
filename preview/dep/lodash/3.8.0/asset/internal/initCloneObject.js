@@ -1,10 +1,2 @@
-define('lodash/internal/initCloneObject', [], function () {
-    function initCloneObject(object) {
-        var Ctor = object.constructor;
-        if (!(typeof Ctor == 'function' && Ctor instanceof Ctor)) {
-            Ctor = Object;
-        }
-        return new Ctor();
-    }
-    return initCloneObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/initCloneObject",[],function(){function e(e){var t=e.constructor;if(!("function"==typeof t&&t instanceof t))t=Object;return new t}return e});

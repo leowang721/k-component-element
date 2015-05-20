@@ -1,12 +1,2 @@
-define('lodash/internal/pickByCallback', ['./baseForIn'], function (baseForIn) {
-    function pickByCallback(object, predicate) {
-        var result = {};
-        baseForIn(object, function (value, key, object) {
-            if (predicate(value, key, object)) {
-                result[key] = value;
-            }
-        });
-        return result;
-    }
-    return pickByCallback;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/pickByCallback",["./baseForIn"],function(e){function t(t,n){var r={};return e(t,function(e,t,i){if(n(e,t,i))r[t]=e}),r}return t});

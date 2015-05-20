@@ -1,22 +1,2 @@
-define('lodash/internal/createPartialWrapper', [
-    './createCtorWrapper',
-    './root'
-], function (createCtorWrapper, root) {
-    var BIND_FLAG = 1;
-    function createPartialWrapper(func, bitmask, thisArg, partials) {
-        var isBind = bitmask & BIND_FLAG, Ctor = createCtorWrapper(func);
-        function wrapper() {
-            var argsIndex = -1, argsLength = arguments.length, leftIndex = -1, leftLength = partials.length, args = Array(argsLength + leftLength);
-            while (++leftIndex < leftLength) {
-                args[leftIndex] = partials[leftIndex];
-            }
-            while (argsLength--) {
-                args[leftIndex++] = arguments[++argsIndex];
-            }
-            var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
-            return fn.apply(isBind ? thisArg : this, args);
-        }
-        return wrapper;
-    }
-    return createPartialWrapper;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createPartialWrapper",["./createCtorWrapper","./root"],function(e,t){function n(n,i,o,a){function u(){for(var e=-1,r=arguments.length,i=-1,l=a.length,f=Array(r+l);++i<l;)f[i]=a[i];for(;r--;)f[i++]=arguments[++e];var h=this&&this!==t&&this instanceof u?c:n;return h.apply(s?o:this,f)}var s=i&r,c=e(n);return u}var r=1;return n});

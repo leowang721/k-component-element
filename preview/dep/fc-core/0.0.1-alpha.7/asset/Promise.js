@@ -1,26 +1,2 @@
-define('fc-core/Promise', [
-    'require',
-    'promise'
-], function (require) {
-    'use strict';
-    var Promise = require('promise');
-    Promise.cast = Promise.cast || function (value) {
-        if (value && typeof value === 'object' && value.constructor === this) {
-            return value;
-        }
-        return new Promise(function (resolve) {
-            resolve(value);
-        });
-    };
-    function promiseRequire(modules) {
-        var abort;
-        var promise = new this(function (resolve, reject) {
-                window.require(modules, resolve);
-                abort = reject;
-            });
-        promise.abort = abort;
-        return promise;
-    }
-    Promise.require = promiseRequire;
-    return Promise;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("fc-core/Promise",["require","promise"],function(require){"use strict";function e(e){var t,n=new this(function(n,r){window.require(e,n),t=r});return n.abort=t,n}var t=require("promise");return t.cast=t.cast||function(e){if(e&&"object"==typeof e&&e.constructor===this)return e;else return new t(function(t){t(e)})},t.require=e,t});

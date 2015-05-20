@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 (function (f) {
     if (typeof exports === 'object' && typeof module !== 'undefined') {
         module.exports = f();

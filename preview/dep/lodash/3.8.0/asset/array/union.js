@@ -1,10 +1,2 @@
-define('lodash/array/union', [
-    '../internal/baseFlatten',
-    '../internal/baseUniq',
-    '../function/restParam'
-], function (baseFlatten, baseUniq, restParam) {
-    var union = restParam(function (arrays) {
-            return baseUniq(baseFlatten(arrays, false, true));
-        });
-    return union;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/union",["../internal/baseFlatten","../internal/baseUniq","../function/restParam"],function(e,t,n){var r=n(function(n){return t(e(n,!1,!0))});return r});

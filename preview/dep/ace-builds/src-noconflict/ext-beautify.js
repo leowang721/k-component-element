@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/ext/beautify/php_rules",["require","exports","module","ace/token_iterator"], function(require, exports, module) {
 "use strict";
 var TokenIterator = require("ace/token_iterator").TokenIterator;

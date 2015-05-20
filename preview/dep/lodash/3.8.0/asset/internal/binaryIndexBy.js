@@ -1,27 +1,2 @@
-define('lodash/internal/binaryIndexBy', [], function () {
-    var undefined;
-    var floor = Math.floor;
-    var nativeMin = Math.min;
-    var MAX_ARRAY_LENGTH = Math.pow(2, 32) - 1, MAX_ARRAY_INDEX = MAX_ARRAY_LENGTH - 1;
-    function binaryIndexBy(array, value, iteratee, retHighest) {
-        value = iteratee(value);
-        var low = 0, high = array ? array.length : 0, valIsNaN = value !== value, valIsUndef = value === undefined;
-        while (low < high) {
-            var mid = floor((low + high) / 2), computed = iteratee(array[mid]), isReflexive = computed === computed;
-            if (valIsNaN) {
-                var setLow = isReflexive || retHighest;
-            } else if (valIsUndef) {
-                setLow = isReflexive && (retHighest || computed !== undefined);
-            } else {
-                setLow = retHighest ? computed <= value : computed < value;
-            }
-            if (setLow) {
-                low = mid + 1;
-            } else {
-                high = mid;
-            }
-        }
-        return nativeMin(high, MAX_ARRAY_INDEX);
-    }
-    return binaryIndexBy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/binaryIndexBy",[],function(){function e(e,i,a,u){i=a(i);for(var s=0,c=e?e.length:0,l=i!==i,f=i===t;c>s;){var h=n((s+c)/2),d=a(e[h]),p=d===d;if(l)var v=p||u;else if(f)v=p&&(u||d!==t);else v=u?i>=d:i>d;if(v)s=h+1;else c=h}return r(c,o)}var t,n=Math.floor,r=Math.min,i=Math.pow(2,32)-1,o=i-1;return e});

@@ -1,6 +1,2 @@
-define('lodash/string/kebabCase', ['../internal/createCompounder'], function (createCompounder) {
-    var kebabCase = createCompounder(function (result, word, index) {
-            return result + (index ? '-' : '') + word.toLowerCase();
-        });
-    return kebabCase;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/kebabCase",["../internal/createCompounder"],function(e){var n=e(function(e,n,t){return e+(t?"-":"")+n.toLowerCase()});return n});

@@ -1,4 +1,2 @@
-define('lodash/internal/baseFor', ['./createBaseFor'], function (createBaseFor) {
-    var baseFor = createBaseFor();
-    return baseFor;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseFor",["./createBaseFor"],function(e){var t=e();return t});

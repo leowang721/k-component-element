@@ -1,11 +1,2 @@
-define('lodash/internal/getSymbols', [
-    '../utility/constant',
-    '../lang/isNative',
-    './toObject'
-], function (constant, isNative, toObject) {
-    var getOwnPropertySymbols = isNative(getOwnPropertySymbols = Object.getOwnPropertySymbols) && getOwnPropertySymbols;
-    var getSymbols = !getOwnPropertySymbols ? constant([]) : function (object) {
-            return getOwnPropertySymbols(toObject(object));
-        };
-    return getSymbols;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/getSymbols",["../utility/constant","../lang/isNative","./toObject"],function(e,t,n){var r=t(r=Object.getOwnPropertySymbols)&&r,i=!r?e([]):function(e){return r(n(e))};return i});

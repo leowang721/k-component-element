@@ -1,25 +1,2 @@
-define('lodash/object/omit', [
-    '../internal/arrayMap',
-    '../internal/baseDifference',
-    '../internal/baseFlatten',
-    '../internal/bindCallback',
-    './keysIn',
-    '../internal/pickByArray',
-    '../internal/pickByCallback',
-    '../function/restParam'
-], function (arrayMap, baseDifference, baseFlatten, bindCallback, keysIn, pickByArray, pickByCallback, restParam) {
-    var omit = restParam(function (object, props) {
-            if (object == null) {
-                return {};
-            }
-            if (typeof props[0] != 'function') {
-                var props = arrayMap(baseFlatten(props), String);
-                return pickByArray(object, baseDifference(keysIn(object), props));
-            }
-            var predicate = bindCallback(props[0], props[1], 3);
-            return pickByCallback(object, function (value, key, object) {
-                return !predicate(value, key, object);
-            });
-        });
-    return omit;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/omit",["../internal/arrayMap","../internal/baseDifference","../internal/baseFlatten","../internal/bindCallback","./keysIn","../internal/pickByArray","../internal/pickByCallback","../function/restParam"],function(e,n,t,r,i,o,a,u){var l=u(function(u,l){if(null==u)return{};if("function"!=typeof l[0]){var l=e(t(l),String);return o(u,n(i(u),l))}var c=r(l[0],l[1],3);return a(u,function(e,n,t){return!c(e,n,t)})});return l});

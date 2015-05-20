@@ -1,26 +1,2 @@
-define('lodash/internal/getFuncName', [
-    './baseProperty',
-    '../utility/constant',
-    './realNames',
-    '../support'
-], function (baseProperty, constant, realNames, support) {
-    var getFuncName = function () {
-            if (!support.funcNames) {
-                return constant('');
-            }
-            if (constant.name == 'constant') {
-                return baseProperty('name');
-            }
-            return function (func) {
-                var result = func.name, array = realNames[result], length = array ? array.length : 0;
-                while (length--) {
-                    var data = array[length], otherFunc = data.func;
-                    if (otherFunc == null || otherFunc == func) {
-                        return data.name;
-                    }
-                }
-                return result;
-            };
-        }();
-    return getFuncName;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/getFuncName",["./baseProperty","../utility/constant","./realNames","../support"],function(e,t,n,r){var i=function(){if(!r.funcNames)return t("");if("constant"==t.name)return e("name");else return function(e){for(var t=e.name,r=n[t],i=r?r.length:0;i--;){var o=r[i],a=o.func;if(null==a||a==e)return o.name}return t}}();return i});

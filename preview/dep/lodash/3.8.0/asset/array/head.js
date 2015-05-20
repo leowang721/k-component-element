@@ -1,3 +1,2 @@
-define('lodash/array/head', ['./first'], function (first) {
-    return first;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/head",["./first"],function(e){return e});

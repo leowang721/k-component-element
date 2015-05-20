@@ -1,15 +1,2 @@
-define('lodash/internal/createCompounder', [
-    '../string/deburr',
-    '../string/words'
-], function (deburr, words) {
-    function createCompounder(callback) {
-        return function (string) {
-            var index = -1, array = words(deburr(string)), length = array.length, result = '';
-            while (++index < length) {
-                result = callback(result, array[index], index);
-            }
-            return result;
-        };
-    }
-    return createCompounder;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createCompounder",["../string/deburr","../string/words"],function(e,t){function n(n){return function(r){for(var i=-1,o=t(e(r)),a=o.length,u="";++i<a;)u=n(u,o[i],i);return u}}return n});

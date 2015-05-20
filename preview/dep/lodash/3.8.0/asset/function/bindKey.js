@@ -1,17 +1,2 @@
-define('lodash/function/bindKey', [
-    '../internal/createWrapper',
-    '../internal/replaceHolders',
-    './restParam'
-], function (createWrapper, replaceHolders, restParam) {
-    var BIND_FLAG = 1, BIND_KEY_FLAG = 2, PARTIAL_FLAG = 32;
-    var bindKey = restParam(function (object, key, partials) {
-            var bitmask = BIND_FLAG | BIND_KEY_FLAG;
-            if (partials.length) {
-                var holders = replaceHolders(partials, bindKey.placeholder);
-                bitmask |= PARTIAL_FLAG;
-            }
-            return createWrapper(key, bitmask, object, partials, holders);
-        });
-    bindKey.placeholder = {};
-    return bindKey;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/bindKey",["../internal/createWrapper","../internal/replaceHolders","./restParam"],function(e,t,n){var r=1,i=2,o=32,a=n(function(n,s,u){var c=r|i;if(u.length){var l=t(u,a.placeholder);c|=o}return e(s,c,n,u,l)});return a.placeholder={},a});

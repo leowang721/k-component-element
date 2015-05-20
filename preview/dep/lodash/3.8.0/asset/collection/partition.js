@@ -1,11 +1,2 @@
-define('lodash/collection/partition', ['../internal/createAggregator'], function (createAggregator) {
-    var partition = createAggregator(function (result, value, key) {
-            result[key ? 0 : 1].push(value);
-        }, function () {
-            return [
-                [],
-                []
-            ];
-        });
-    return partition;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/partition",["../internal/createAggregator"],function(e){var t=e(function(e,t,n){e[n?0:1].push(t)},function(){return[[],[]]});return t});

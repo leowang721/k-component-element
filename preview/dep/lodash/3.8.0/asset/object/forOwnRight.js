@@ -1,7 +1,2 @@
-define('lodash/object/forOwnRight', [
-    '../internal/baseForOwnRight',
-    '../internal/createForOwn'
-], function (baseForOwnRight, createForOwn) {
-    var forOwnRight = createForOwn(baseForOwnRight);
-    return forOwnRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/forOwnRight",["../internal/baseForOwnRight","../internal/createForOwn"],function(e,n){var t=n(e);return t});

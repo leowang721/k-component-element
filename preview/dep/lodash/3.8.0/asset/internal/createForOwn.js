@@ -1,12 +1,2 @@
-define('lodash/internal/createForOwn', ['./bindCallback'], function (bindCallback) {
-    var undefined;
-    function createForOwn(objectFunc) {
-        return function (object, iteratee, thisArg) {
-            if (typeof iteratee != 'function' || thisArg !== undefined) {
-                iteratee = bindCallback(iteratee, thisArg, 3);
-            }
-            return objectFunc(object, iteratee);
-        };
-    }
-    return createForOwn;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createForOwn",["./bindCallback"],function(e){function t(t){return function(r,i,o){if("function"!=typeof i||o!==n)i=e(i,o,3);return t(r,i)}}var n;return t});

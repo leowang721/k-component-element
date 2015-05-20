@@ -1,4 +1,2 @@
-define('lodash/internal/reEvaluate', [], function () {
-    var reEvaluate = /<%([\s\S]+?)%>/g;
-    return reEvaluate;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/reEvaluate",[],function(){var e=/<%([\s\S]+?)%>/g;return e});

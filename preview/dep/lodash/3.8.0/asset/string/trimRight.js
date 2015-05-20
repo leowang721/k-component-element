@@ -1,19 +1,2 @@
-define('lodash/string/trimRight', [
-    '../internal/baseToString',
-    '../internal/charsRightIndex',
-    '../internal/isIterateeCall',
-    '../internal/trimmedRightIndex'
-], function (baseToString, charsRightIndex, isIterateeCall, trimmedRightIndex) {
-    function trimRight(string, chars, guard) {
-        var value = string;
-        string = baseToString(string);
-        if (!string) {
-            return string;
-        }
-        if (guard ? isIterateeCall(value, chars, guard) : chars == null) {
-            return string.slice(0, trimmedRightIndex(string) + 1);
-        }
-        return string.slice(0, charsRightIndex(string, chars + '') + 1);
-    }
-    return trimRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/trimRight",["../internal/baseToString","../internal/charsRightIndex","../internal/isIterateeCall","../internal/trimmedRightIndex"],function(e,n,t,r){function i(i,o,a){var u=i;if(i=e(i),!i)return i;if(a?t(u,o,a):null==o)return i.slice(0,r(i)+1);else return i.slice(0,n(i,o+"")+1)}return i});

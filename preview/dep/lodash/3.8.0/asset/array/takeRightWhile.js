@@ -1,9 +1,2 @@
-define('lodash/array/takeRightWhile', [
-    '../internal/baseCallback',
-    '../internal/baseWhile'
-], function (baseCallback, baseWhile) {
-    function takeRightWhile(array, predicate, thisArg) {
-        return array && array.length ? baseWhile(array, baseCallback(predicate, thisArg, 3), false, true) : [];
-    }
-    return takeRightWhile;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/takeRightWhile",["../internal/baseCallback","../internal/baseWhile"],function(e,t){function n(n,r,i){return n&&n.length?t(n,e(r,i,3),!1,!0):[]}return n});

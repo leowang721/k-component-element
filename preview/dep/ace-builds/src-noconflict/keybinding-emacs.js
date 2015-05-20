@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/occur",["require","exports","module","ace/lib/oop","ace/range","ace/search","ace/edit_session","ace/search_highlight","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 

@@ -1,3 +1,2 @@
-define('lodash/chain/plant', ['./wrapperPlant'], function (wrapperPlant) {
-    return wrapperPlant;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/plant",["./wrapperPlant"],function(e){return e});

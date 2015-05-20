@@ -1,14 +1,2 @@
-define('lodash/object/create', [
-    '../internal/baseAssign',
-    '../internal/baseCreate',
-    '../internal/isIterateeCall'
-], function (baseAssign, baseCreate, isIterateeCall) {
-    function create(prototype, properties, guard) {
-        var result = baseCreate(prototype);
-        if (guard && isIterateeCall(prototype, properties, guard)) {
-            properties = null;
-        }
-        return properties ? baseAssign(result, properties) : result;
-    }
-    return create;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/create",["../internal/baseAssign","../internal/baseCreate","../internal/isIterateeCall"],function(e,n,t){function r(r,i,o){var a=n(r);if(o&&t(r,i,o))i=null;return i?e(a,i):a}return r});

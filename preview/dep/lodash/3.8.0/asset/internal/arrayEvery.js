@@ -1,12 +1,2 @@
-define('lodash/internal/arrayEvery', [], function () {
-    function arrayEvery(array, predicate) {
-        var index = -1, length = array.length;
-        while (++index < length) {
-            if (!predicate(array[index], index, array)) {
-                return false;
-            }
-        }
-        return true;
-    }
-    return arrayEvery;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayEvery",[],function(){function e(e,t){for(var n=-1,r=e.length;++n<r;)if(!t(e[n],n,e))return!1;return!0}return e});

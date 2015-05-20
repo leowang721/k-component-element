@@ -1,14 +1,2 @@
-define('lodash/internal/sortedUniq', [], function () {
-    function sortedUniq(array, iteratee) {
-        var seen, index = -1, length = array.length, resIndex = -1, result = [];
-        while (++index < length) {
-            var value = array[index], computed = iteratee ? iteratee(value, index, array) : value;
-            if (!index || seen !== computed) {
-                seen = computed;
-                result[++resIndex] = value;
-            }
-        }
-        return result;
-    }
-    return sortedUniq;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/sortedUniq",[],function(){function e(e,t){for(var n,r=-1,i=e.length,o=-1,a=[];++r<i;){var u=e[r],s=t?t(u,r,e):u;if(!r||n!==s)n=s,a[++o]=u}return a}return e});

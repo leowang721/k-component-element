@@ -1,14 +1,2 @@
-define('lodash/internal/lazyReverse', ['./LazyWrapper'], function (LazyWrapper) {
-    function lazyReverse() {
-        if (this.__filtered__) {
-            var result = new LazyWrapper(this);
-            result.__dir__ = -1;
-            result.__filtered__ = true;
-        } else {
-            result = this.clone();
-            result.__dir__ *= -1;
-        }
-        return result;
-    }
-    return lazyReverse;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/lazyReverse",["./LazyWrapper"],function(e){function t(){if(this.__filtered__){var t=new e(this);t.__dir__=-1,t.__filtered__=!0}else t=this.clone(),t.__dir__*=-1;return t}return t});

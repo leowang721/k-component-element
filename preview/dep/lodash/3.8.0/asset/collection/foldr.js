@@ -1,3 +1,2 @@
-define('lodash/collection/foldr', ['./reduceRight'], function (reduceRight) {
-    return reduceRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/foldr",["./reduceRight"],function(e){return e});

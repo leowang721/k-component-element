@@ -1,14 +1,2 @@
-define('lodash/internal/arrayMax', [], function () {
-    var NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
-    function arrayMax(array) {
-        var index = -1, length = array.length, result = NEGATIVE_INFINITY;
-        while (++index < length) {
-            var value = array[index];
-            if (value > result) {
-                result = value;
-            }
-        }
-        return result;
-    }
-    return arrayMax;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayMax",[],function(){function e(e){for(var n=-1,r=e.length,i=t;++n<r;){var o=e[n];if(o>i)i=o}return i}var t=Number.NEGATIVE_INFINITY;return e});

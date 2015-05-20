@@ -1,13 +1,2 @@
-define('lodash/internal/baseMap', [
-    './baseEach',
-    './isArrayLike'
-], function (baseEach, isArrayLike) {
-    function baseMap(collection, iteratee) {
-        var index = -1, result = isArrayLike(collection) ? Array(collection.length) : [];
-        baseEach(collection, function (value, key, collection) {
-            result[++index] = iteratee(value, key, collection);
-        });
-        return result;
-    }
-    return baseMap;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseMap",["./baseEach","./isArrayLike"],function(e,t){function n(n,r){var i=-1,o=t(n)?Array(n.length):[];return e(n,function(e,t,n){o[++i]=r(e,t,n)}),o}return n});

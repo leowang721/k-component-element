@@ -1,16 +1,2 @@
-define('lodash/internal/lazyClone', [
-    './LazyWrapper',
-    './arrayCopy'
-], function (LazyWrapper, arrayCopy) {
-    function lazyClone() {
-        var actions = this.__actions__, iteratees = this.__iteratees__, views = this.__views__, result = new LazyWrapper(this.__wrapped__);
-        result.__actions__ = actions ? arrayCopy(actions) : null;
-        result.__dir__ = this.__dir__;
-        result.__filtered__ = this.__filtered__;
-        result.__iteratees__ = iteratees ? arrayCopy(iteratees) : null;
-        result.__takeCount__ = this.__takeCount__;
-        result.__views__ = views ? arrayCopy(views) : null;
-        return result;
-    }
-    return lazyClone;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/lazyClone",["./LazyWrapper","./arrayCopy"],function(e,t){function n(){var n=this.__actions__,r=this.__iteratees__,i=this.__views__,o=new e(this.__wrapped__);return o.__actions__=n?t(n):null,o.__dir__=this.__dir__,o.__filtered__=this.__filtered__,o.__iteratees__=r?t(r):null,o.__takeCount__=this.__takeCount__,o.__views__=i?t(i):null,o}return n});

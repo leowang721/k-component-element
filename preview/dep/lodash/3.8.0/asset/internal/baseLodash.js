@@ -1,5 +1,2 @@
-define('lodash/internal/baseLodash', [], function () {
-    function baseLodash() {
-    }
-    return baseLodash;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseLodash",[],function(){function e(){}return e});

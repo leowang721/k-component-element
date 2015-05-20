@@ -1,10 +1,2 @@
-define('lodash/lang/cloneDeep', [
-    '../internal/baseClone',
-    '../internal/bindCallback'
-], function (baseClone, bindCallback) {
-    function cloneDeep(value, customizer, thisArg) {
-        customizer = typeof customizer == 'function' && bindCallback(customizer, thisArg, 1);
-        return baseClone(value, true, customizer);
-    }
-    return cloneDeep;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/cloneDeep",["../internal/baseClone","../internal/bindCallback"],function(e,t){function n(n,r,i){return r="function"==typeof r&&t(r,i,1),e(n,!0,r)}return n});

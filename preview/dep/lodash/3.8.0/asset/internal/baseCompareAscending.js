@@ -1,16 +1,2 @@
-define('lodash/internal/baseCompareAscending', [], function () {
-    var undefined;
-    function baseCompareAscending(value, other) {
-        if (value !== other) {
-            var valIsReflexive = value === value, othIsReflexive = other === other;
-            if (value > other || !valIsReflexive || value === undefined && othIsReflexive) {
-                return 1;
-            }
-            if (value < other || !othIsReflexive || other === undefined && valIsReflexive) {
-                return -1;
-            }
-        }
-        return 0;
-    }
-    return baseCompareAscending;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseCompareAscending",[],function(){function e(e,n){if(e!==n){var r=e===e,i=n===n;if(e>n||!r||e===t&&i)return 1;if(n>e||!i||n===t&&r)return-1}return 0}var t;return e});

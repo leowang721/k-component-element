@@ -1,10 +1,2 @@
-define('lodash/object/assign', [
-    '../internal/assignWith',
-    '../internal/baseAssign',
-    '../internal/createAssigner'
-], function (assignWith, baseAssign, createAssigner) {
-    var assign = createAssigner(function (object, source, customizer) {
-            return customizer ? assignWith(object, source, customizer) : baseAssign(object, source);
-        });
-    return assign;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/assign",["../internal/assignWith","../internal/baseAssign","../internal/createAssigner"],function(e,n,t){var r=t(function(t,r,i){return i?e(t,r,i):n(t,r)});return r});

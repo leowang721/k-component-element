@@ -1,6 +1,2 @@
-define('lodash/chain/thru', [], function () {
-    function thru(value, interceptor, thisArg) {
-        return interceptor.call(thisArg, value);
-    }
-    return thru;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/thru",[],function(){function e(e,t,n){return t.call(n,e)}return e});

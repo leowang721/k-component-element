@@ -1,6 +1,2 @@
-define('lodash/internal/compareAscending', ['./baseCompareAscending'], function (baseCompareAscending) {
-    function compareAscending(object, other) {
-        return baseCompareAscending(object.criteria, other.criteria) || object.index - other.index;
-    }
-    return compareAscending;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/compareAscending",["./baseCompareAscending"],function(e){function t(t,n){return e(t.criteria,n.criteria)||t.index-n.index}return t});

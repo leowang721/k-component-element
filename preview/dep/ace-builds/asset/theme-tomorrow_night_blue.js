@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/theme/tomorrow_night_blue', [
     'require',
     'exports',

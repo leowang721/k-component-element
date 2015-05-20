@@ -1,25 +1,2 @@
-define('lodash/function/before', [], function () {
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    function before(n, func) {
-        var result;
-        if (typeof func != 'function') {
-            if (typeof n == 'function') {
-                var temp = n;
-                n = func;
-                func = temp;
-            } else {
-                throw new TypeError(FUNC_ERROR_TEXT);
-            }
-        }
-        return function () {
-            if (--n > 0) {
-                result = func.apply(this, arguments);
-            }
-            if (n <= 1) {
-                func = null;
-            }
-            return result;
-        };
-    }
-    return before;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/before",[],function(){function e(e,n){var r;if("function"!=typeof n)if("function"==typeof e){var i=e;e=n,n=i}else throw new TypeError(t);return function(){if(--e>0)r=n.apply(this,arguments);if(1>=e)n=null;return r}}var t="Expected a function";return e});

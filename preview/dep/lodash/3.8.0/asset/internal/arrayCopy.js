@@ -1,11 +1,2 @@
-define('lodash/internal/arrayCopy', [], function () {
-    function arrayCopy(source, array) {
-        var index = -1, length = source.length;
-        array || (array = Array(length));
-        while (++index < length) {
-            array[index] = source[index];
-        }
-        return array;
-    }
-    return arrayCopy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayCopy",[],function(){function e(e,t){var n=-1,r=e.length;for(t||(t=Array(r));++n<r;)t[n]=e[n];return t}return e});

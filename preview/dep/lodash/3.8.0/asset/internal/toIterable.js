@@ -1,16 +1,2 @@
-define('lodash/internal/toIterable', [
-    './isArrayLike',
-    '../lang/isObject',
-    '../object/values'
-], function (isArrayLike, isObject, values) {
-    function toIterable(value) {
-        if (value == null) {
-            return [];
-        }
-        if (!isArrayLike(value)) {
-            return values(value);
-        }
-        return isObject(value) ? value : Object(value);
-    }
-    return toIterable;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/toIterable",["./isArrayLike","../lang/isObject","../object/values"],function(e,t,n){function r(r){if(null==r)return[];if(!e(r))return n(r);else return t(r)?r:Object(r)}return r});

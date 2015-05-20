@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/theme/crimson_editor', [
     'require',
     'exports',

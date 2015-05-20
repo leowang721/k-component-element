@@ -1,6 +1,2 @@
-define('lodash/internal/mapDelete', [], function () {
-    function mapDelete(key) {
-        return this.has(key) && delete this.__data__[key];
-    }
-    return mapDelete;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/mapDelete",[],function(){function e(e){return this.has(e)&&delete this.__data__[e]}return e});

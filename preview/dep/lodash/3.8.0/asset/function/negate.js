@@ -1,12 +1,2 @@
-define('lodash/function/negate', [], function () {
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    function negate(predicate) {
-        if (typeof predicate != 'function') {
-            throw new TypeError(FUNC_ERROR_TEXT);
-        }
-        return function () {
-            return !predicate.apply(this, arguments);
-        };
-    }
-    return negate;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/negate",[],function(){function e(e){if("function"!=typeof e)throw new TypeError(t);return function(){return!e.apply(this,arguments)}}var t="Expected a function";return e});

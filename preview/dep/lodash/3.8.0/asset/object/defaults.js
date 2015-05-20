@@ -1,16 +1,2 @@
-define('lodash/object/defaults', [
-    './assign',
-    '../internal/assignDefaults',
-    '../function/restParam'
-], function (assign, assignDefaults, restParam) {
-    var undefined;
-    var defaults = restParam(function (args) {
-            var object = args[0];
-            if (object == null) {
-                return object;
-            }
-            args.push(assignDefaults);
-            return assign.apply(undefined, args);
-        });
-    return defaults;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/defaults",["./assign","../internal/assignDefaults","../function/restParam"],function(e,n,t){var r,i=t(function(t){var i=t[0];if(null==i)return i;else return t.push(n),e.apply(r,t)});return i});

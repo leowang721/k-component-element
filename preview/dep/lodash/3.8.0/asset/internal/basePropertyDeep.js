@@ -1,13 +1,2 @@
-define('lodash/internal/basePropertyDeep', [
-    './baseGet',
-    './toPath'
-], function (baseGet, toPath) {
-    function basePropertyDeep(path) {
-        var pathKey = path + '';
-        path = toPath(path);
-        return function (object) {
-            return baseGet(object, path, pathKey);
-        };
-    }
-    return basePropertyDeep;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/basePropertyDeep",["./baseGet","./toPath"],function(e,t){function n(n){var r=n+"";return n=t(n),function(t){return e(t,n,r)}}return n});

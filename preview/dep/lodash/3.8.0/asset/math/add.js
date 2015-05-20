@@ -1,6 +1,2 @@
-define('lodash/math/add', [], function () {
-    function add(augend, addend) {
-        return (+augend || 0) + (+addend || 0);
-    }
-    return add;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/math/add",[],function(){function e(e,n){return(+e||0)+(+n||0)}return e});

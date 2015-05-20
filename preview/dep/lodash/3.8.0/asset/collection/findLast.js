@@ -1,7 +1,2 @@
-define('lodash/collection/findLast', [
-    '../internal/baseEachRight',
-    '../internal/createFind'
-], function (baseEachRight, createFind) {
-    var findLast = createFind(baseEachRight, true);
-    return findLast;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/findLast",["../internal/baseEachRight","../internal/createFind"],function(e,t){var n=t(e,!0);return n});

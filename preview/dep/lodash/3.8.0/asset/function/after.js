@@ -1,22 +1,2 @@
-define('lodash/function/after', ['../internal/root'], function (root) {
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    var nativeIsFinite = root.isFinite;
-    function after(n, func) {
-        if (typeof func != 'function') {
-            if (typeof n == 'function') {
-                var temp = n;
-                n = func;
-                func = temp;
-            } else {
-                throw new TypeError(FUNC_ERROR_TEXT);
-            }
-        }
-        n = nativeIsFinite(n = +n) ? n : 0;
-        return function () {
-            if (--n < 1) {
-                return func.apply(this, arguments);
-            }
-        };
-    }
-    return after;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/after",["../internal/root"],function(e){function t(e,t){if("function"!=typeof t)if("function"==typeof e){var i=e;e=t,t=i}else throw new TypeError(n);return e=r(e=+e)?e:0,function(){if(--e<1)return t.apply(this,arguments);else return void 0}}var n="Expected a function",r=e.isFinite;return t});

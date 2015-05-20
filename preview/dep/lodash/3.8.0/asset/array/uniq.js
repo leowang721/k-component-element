@@ -1,21 +1,2 @@
-define('lodash/array/uniq', [
-    '../internal/baseCallback',
-    '../internal/baseUniq',
-    '../internal/isIterateeCall',
-    '../internal/sortedUniq'
-], function (baseCallback, baseUniq, isIterateeCall, sortedUniq) {
-    function uniq(array, isSorted, iteratee, thisArg) {
-        var length = array ? array.length : 0;
-        if (!length) {
-            return [];
-        }
-        if (isSorted != null && typeof isSorted != 'boolean') {
-            thisArg = iteratee;
-            iteratee = isIterateeCall(array, isSorted, thisArg) ? null : isSorted;
-            isSorted = false;
-        }
-        iteratee = iteratee == null ? iteratee : baseCallback(iteratee, thisArg, 3);
-        return isSorted ? sortedUniq(array, iteratee) : baseUniq(array, iteratee);
-    }
-    return uniq;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/uniq",["../internal/baseCallback","../internal/baseUniq","../internal/isIterateeCall","../internal/sortedUniq"],function(e,t,n,r){function i(i,o,a,s){var u=i?i.length:0;if(!u)return[];if(null!=o&&"boolean"!=typeof o)s=a,a=n(i,o,s)?null:o,o=!1;return a=null==a?a:e(a,s,3),o?r(i,a):t(i,a)}return i});

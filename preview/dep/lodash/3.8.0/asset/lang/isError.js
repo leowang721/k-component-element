@@ -1,9 +1,2 @@
-define('lodash/lang/isError', ['../internal/isObjectLike'], function (isObjectLike) {
-    var errorTag = '[object Error]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isError(value) {
-        return isObjectLike(value) && typeof value.message == 'string' && objToString.call(value) == errorTag;
-    }
-    return isError;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isError",["../internal/isObjectLike"],function(e){function t(t){return e(t)&&"string"==typeof t.message&&i.call(t)==n}var n="[object Error]",r=Object.prototype,i=r.toString;return t});

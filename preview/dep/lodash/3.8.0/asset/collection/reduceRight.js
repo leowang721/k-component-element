@@ -1,8 +1,2 @@
-define('lodash/collection/reduceRight', [
-    '../internal/arrayReduceRight',
-    '../internal/baseEachRight',
-    '../internal/createReduce'
-], function (arrayReduceRight, baseEachRight, createReduce) {
-    var reduceRight = createReduce(arrayReduceRight, baseEachRight);
-    return reduceRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/reduceRight",["../internal/arrayReduceRight","../internal/baseEachRight","../internal/createReduce"],function(e,t,n){var r=n(e,t);return r});

@@ -1,14 +1,2 @@
-define('lodash/internal/createBindWrapper', [
-    './createCtorWrapper',
-    './root'
-], function (createCtorWrapper, root) {
-    function createBindWrapper(func, thisArg) {
-        var Ctor = createCtorWrapper(func);
-        function wrapper() {
-            var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
-            return fn.apply(thisArg, arguments);
-        }
-        return wrapper;
-    }
-    return createBindWrapper;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createBindWrapper",["./createCtorWrapper","./root"],function(e,t){function n(n,r){function i(){var e=this&&this!==t&&this instanceof i?o:n;return e.apply(r,arguments)}var o=e(n);return i}return n});

@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/snippets/haskell', [
     'require',
     'exports',

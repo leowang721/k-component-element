@@ -1,7 +1,2 @@
-define('lodash/internal/isLength', [], function () {
-    var MAX_SAFE_INTEGER = Math.pow(2, 53) - 1;
-    function isLength(value) {
-        return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-    }
-    return isLength;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isLength",[],function(){function e(e){return"number"==typeof e&&e>-1&&e%1==0&&t>=e}var t=Math.pow(2,53)-1;return e});

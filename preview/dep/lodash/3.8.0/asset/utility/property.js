@@ -1,10 +1,2 @@
-define('lodash/utility/property', [
-    '../internal/baseProperty',
-    '../internal/basePropertyDeep',
-    '../internal/isKey'
-], function (baseProperty, basePropertyDeep, isKey) {
-    function property(path) {
-        return isKey(path) ? baseProperty(path) : basePropertyDeep(path);
-    }
-    return property;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/property",["../internal/baseProperty","../internal/basePropertyDeep","../internal/isKey"],function(e,n,t){function r(r){return t(r)?e(r):n(r)}return r});

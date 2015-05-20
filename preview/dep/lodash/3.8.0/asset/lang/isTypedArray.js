@@ -1,16 +1,2 @@
-define('lodash/lang/isTypedArray', [
-    '../internal/isLength',
-    '../internal/isObjectLike'
-], function (isLength, isObjectLike) {
-    var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', weakMapTag = '[object WeakMap]';
-    var arrayBufferTag = '[object ArrayBuffer]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
-    var typedArrayTags = {};
-    typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
-    typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isTypedArray(value) {
-        return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[objToString.call(value)];
-    }
-    return isTypedArray;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isTypedArray",["../internal/isLength","../internal/isObjectLike"],function(e,t){function n(n){return t(n)&&e(n.length)&&!!C[j.call(n)]}var r="[object Arguments]",i="[object Array]",o="[object Boolean]",a="[object Date]",u="[object Error]",c="[object Function]",s="[object Map]",l="[object Number]",f="[object Object]",h="[object RegExp]",d="[object Set]",p="[object String]",v="[object WeakMap]",g="[object ArrayBuffer]",m="[object Float32Array]",y="[object Float64Array]",b="[object Int8Array]",w="[object Int16Array]",E="[object Int32Array]",A="[object Uint8Array]",_="[object Uint8ClampedArray]",O="[object Uint16Array]",x="[object Uint32Array]",C={};C[m]=C[y]=C[b]=C[w]=C[E]=C[A]=C[_]=C[O]=C[x]=!0,C[r]=C[i]=C[g]=C[o]=C[a]=C[u]=C[c]=C[s]=C[l]=C[f]=C[h]=C[d]=C[p]=C[v]=!1;var k=Object.prototype,j=k.toString;return n});

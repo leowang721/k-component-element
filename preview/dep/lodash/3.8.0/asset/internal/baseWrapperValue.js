@@ -1,18 +1,2 @@
-define('lodash/internal/baseWrapperValue', ['./LazyWrapper'], function (LazyWrapper) {
-    var arrayProto = Array.prototype;
-    var push = arrayProto.push;
-    function baseWrapperValue(value, actions) {
-        var result = value;
-        if (result instanceof LazyWrapper) {
-            result = result.value();
-        }
-        var index = -1, length = actions.length;
-        while (++index < length) {
-            var args = [result], action = actions[index];
-            push.apply(args, action.args);
-            result = action.func.apply(action.thisArg, args);
-        }
-        return result;
-    }
-    return baseWrapperValue;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseWrapperValue",["./LazyWrapper"],function(e){function t(t,n){var i=t;if(i instanceof e)i=i.value();for(var o=-1,a=n.length;++o<a;){var u=[i],s=n[o];r.apply(u,s.args),i=s.func.apply(s.thisArg,u)}return i}var n=Array.prototype,r=n.push;return t});

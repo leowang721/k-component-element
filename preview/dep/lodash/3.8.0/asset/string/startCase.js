@@ -1,6 +1,2 @@
-define('lodash/string/startCase', ['../internal/createCompounder'], function (createCompounder) {
-    var startCase = createCompounder(function (result, word, index) {
-            return result + (index ? ' ' : '') + (word.charAt(0).toUpperCase() + word.slice(1));
-        });
-    return startCase;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/startCase",["../internal/createCompounder"],function(e){var n=e(function(e,n,t){return e+(t?" ":"")+(n.charAt(0).toUpperCase()+n.slice(1))});return n});

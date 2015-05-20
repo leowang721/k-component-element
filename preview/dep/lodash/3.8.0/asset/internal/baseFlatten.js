@@ -1,26 +1,2 @@
-define('lodash/internal/baseFlatten', [
-    '../lang/isArguments',
-    '../lang/isArray',
-    './isArrayLike',
-    './isObjectLike'
-], function (isArguments, isArray, isArrayLike, isObjectLike) {
-    function baseFlatten(array, isDeep, isStrict) {
-        var index = -1, length = array.length, resIndex = -1, result = [];
-        while (++index < length) {
-            var value = array[index];
-            if (isObjectLike(value) && isArrayLike(value) && (isStrict || isArray(value) || isArguments(value))) {
-                if (isDeep) {
-                    value = baseFlatten(value, isDeep, isStrict);
-                }
-                var valIndex = -1, valLength = value.length;
-                while (++valIndex < valLength) {
-                    result[++resIndex] = value[valIndex];
-                }
-            } else if (!isStrict) {
-                result[++resIndex] = value;
-            }
-        }
-        return result;
-    }
-    return baseFlatten;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseFlatten",["../lang/isArguments","../lang/isArray","./isArrayLike","./isObjectLike"],function(e,t,n,r){function i(o,a,u){for(var s=-1,c=o.length,l=-1,f=[];++s<c;){var h=o[s];if(r(h)&&n(h)&&(u||t(h)||e(h))){if(a)h=i(h,a,u);for(var d=-1,p=h.length;++d<p;)f[++l]=h[d]}else if(!u)f[++l]=h}return f}return i});

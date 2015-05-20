@@ -1,15 +1,2 @@
-define('lodash/object/pick', [
-    '../internal/baseFlatten',
-    '../internal/bindCallback',
-    '../internal/pickByArray',
-    '../internal/pickByCallback',
-    '../function/restParam'
-], function (baseFlatten, bindCallback, pickByArray, pickByCallback, restParam) {
-    var pick = restParam(function (object, props) {
-            if (object == null) {
-                return {};
-            }
-            return typeof props[0] == 'function' ? pickByCallback(object, bindCallback(props[0], props[1], 3)) : pickByArray(object, baseFlatten(props));
-        });
-    return pick;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/pick",["../internal/baseFlatten","../internal/bindCallback","../internal/pickByArray","../internal/pickByCallback","../function/restParam"],function(e,n,t,r,i){var o=i(function(i,o){if(null==i)return{};else return"function"==typeof o[0]?r(i,n(o[0],o[1],3)):t(i,e(o))});return o});

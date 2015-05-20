@@ -1,18 +1,2 @@
-define('lodash/array/zipObject', ['../lang/isArray'], function (isArray) {
-    function zipObject(props, values) {
-        var index = -1, length = props ? props.length : 0, result = {};
-        if (length && !values && !isArray(props[0])) {
-            values = [];
-        }
-        while (++index < length) {
-            var key = props[index];
-            if (values) {
-                result[key] = values[index];
-            } else if (key) {
-                result[key[0]] = key[1];
-            }
-        }
-        return result;
-    }
-    return zipObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/zipObject",["../lang/isArray"],function(e){function t(t,n){var r=-1,i=t?t.length:0,o={};if(i&&!n&&!e(t[0]))n=[];for(;++r<i;){var a=t[r];if(n)o[a]=n[r];else if(a)o[a[0]]=a[1]}return o}return t});

@@ -1,18 +1,2 @@
-define('lodash/math/sum', [
-    '../internal/arraySum',
-    '../internal/baseCallback',
-    '../internal/baseSum',
-    '../lang/isArray',
-    '../internal/isIterateeCall',
-    '../internal/toIterable'
-], function (arraySum, baseCallback, baseSum, isArray, isIterateeCall, toIterable) {
-    function sum(collection, iteratee, thisArg) {
-        if (thisArg && isIterateeCall(collection, iteratee, thisArg)) {
-            iteratee = null;
-        }
-        var noIteratee = iteratee == null;
-        iteratee = noIteratee ? iteratee : baseCallback(iteratee, thisArg, 3);
-        return noIteratee ? arraySum(isArray(collection) ? collection : toIterable(collection)) : baseSum(collection, iteratee);
-    }
-    return sum;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/math/sum",["../internal/arraySum","../internal/baseCallback","../internal/baseSum","../lang/isArray","../internal/isIterateeCall","../internal/toIterable"],function(e,n,t,r,i,o){function a(a,u,l){if(l&&i(a,u,l))u=null;var c=null==u;return u=c?u:n(u,l,3),c?e(r(a)?a:o(a)):t(a,u)}return a});

@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component/main",["require"],function(){var e={version:"0.0.1-alpha.11"};return e}),define("k-component",["k-component/main"],function(e){return e});

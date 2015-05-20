@@ -1,11 +1,2 @@
-define('lodash/collection/size', [
-    '../internal/getLength',
-    '../internal/isLength',
-    '../object/keys'
-], function (getLength, isLength, keys) {
-    function size(collection) {
-        var length = collection ? getLength(collection) : 0;
-        return isLength(length) ? length : keys(collection).length;
-    }
-    return size;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/size",["../internal/getLength","../internal/isLength","../object/keys"],function(e,t,n){function r(r){var i=r?e(r):0;return t(i)?i:n(r).length}return r});

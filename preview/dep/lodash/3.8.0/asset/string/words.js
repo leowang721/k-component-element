@@ -1,17 +1,2 @@
-define('lodash/string/words', [
-    '../internal/baseToString',
-    '../internal/isIterateeCall'
-], function (baseToString, isIterateeCall) {
-    var reWords = function () {
-            var upper = '[A-Z\\xc0-\\xd6\\xd8-\\xde]', lower = '[a-z\\xdf-\\xf6\\xf8-\\xff]+';
-            return RegExp(upper + '+(?=' + upper + lower + ')|' + upper + '?' + lower + '|' + upper + '+|[0-9]+', 'g');
-        }();
-    function words(string, pattern, guard) {
-        if (guard && isIterateeCall(string, pattern, guard)) {
-            pattern = null;
-        }
-        string = baseToString(string);
-        return string.match(pattern || reWords) || [];
-    }
-    return words;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/words",["../internal/baseToString","../internal/isIterateeCall"],function(e,n){function t(t,i,o){if(o&&n(t,i,o))i=null;return t=e(t),t.match(i||r)||[]}var r=function(){var e="[A-Z\\xc0-\\xd6\\xd8-\\xde]",n="[a-z\\xdf-\\xf6\\xf8-\\xff]+";return RegExp(e+"+(?="+e+n+")|"+e+"?"+n+"|"+e+"+|[0-9]+","g")}();return t});

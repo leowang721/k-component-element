@@ -1,12 +1,2 @@
-define('lodash/string/deburr', [
-    '../internal/baseToString',
-    '../internal/deburrLetter'
-], function (baseToString, deburrLetter) {
-    var reComboMark = /[\u0300-\u036f\ufe20-\ufe23]/g;
-    var reLatin1 = /[\xc0-\xd6\xd8-\xde\xdf-\xf6\xf8-\xff]/g;
-    function deburr(string) {
-        string = baseToString(string);
-        return string && string.replace(reLatin1, deburrLetter).replace(reComboMark, '');
-    }
-    return deburr;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/deburr",["../internal/baseToString","../internal/deburrLetter"],function(e,n){function t(t){return t=e(t),t&&t.replace(i,n).replace(r,"")}var r=/[\u0300-\u036f\ufe20-\ufe23]/g,i=/[\xc0-\xd6\xd8-\xde\xdf-\xf6\xf8-\xff]/g;return t});

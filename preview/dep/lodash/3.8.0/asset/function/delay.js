@@ -1,9 +1,2 @@
-define('lodash/function/delay', [
-    '../internal/baseDelay',
-    './restParam'
-], function (baseDelay, restParam) {
-    var delay = restParam(function (func, wait, args) {
-            return baseDelay(func, wait, args);
-        });
-    return delay;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/delay",["../internal/baseDelay","./restParam"],function(e,t){var n=t(function(t,n,r){return e(t,n,r)});return n});

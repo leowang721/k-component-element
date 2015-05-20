@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component/preservedAttributes",["require","./lib/zepto"],function(require){var e=require("./lib/zepto"),t={hidden:function(t){if(null==t)e(this.el).css({height:"auto",visibility:"visible"});else e(this.el).css({height:0,visibility:"hidden"})}};return t});

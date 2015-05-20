@@ -1,9 +1,2 @@
-define('lodash/internal/trimmedRightIndex', ['./isSpace'], function (isSpace) {
-    function trimmedRightIndex(string) {
-        var index = string.length;
-        while (index-- && isSpace(string.charCodeAt(index))) {
-        }
-        return index;
-    }
-    return trimmedRightIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/trimmedRightIndex",["./isSpace"],function(e){function t(t){for(var n=t.length;n--&&e(t.charCodeAt(n)););return n}return t});

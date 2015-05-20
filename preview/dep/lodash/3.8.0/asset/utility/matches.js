@@ -1,9 +1,2 @@
-define('lodash/utility/matches', [
-    '../internal/baseClone',
-    '../internal/baseMatches'
-], function (baseClone, baseMatches) {
-    function matches(source) {
-        return baseMatches(baseClone(source, true));
-    }
-    return matches;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/matches",["../internal/baseClone","../internal/baseMatches"],function(e,n){function t(t){return n(e(t,!0))}return t});

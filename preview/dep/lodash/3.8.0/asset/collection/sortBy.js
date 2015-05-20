@@ -1,27 +1,2 @@
-define('lodash/collection/sortBy', [
-    '../internal/baseCallback',
-    '../internal/baseMap',
-    '../internal/baseSortBy',
-    '../internal/compareAscending',
-    '../internal/isIterateeCall'
-], function (baseCallback, baseMap, baseSortBy, compareAscending, isIterateeCall) {
-    function sortBy(collection, iteratee, thisArg) {
-        if (collection == null) {
-            return [];
-        }
-        if (thisArg && isIterateeCall(collection, iteratee, thisArg)) {
-            iteratee = null;
-        }
-        var index = -1;
-        iteratee = baseCallback(iteratee, thisArg, 3);
-        var result = baseMap(collection, function (value, key, collection) {
-                return {
-                    'criteria': iteratee(value, key, collection),
-                    'index': ++index,
-                    'value': value
-                };
-            });
-        return baseSortBy(result, compareAscending);
-    }
-    return sortBy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/sortBy",["../internal/baseCallback","../internal/baseMap","../internal/baseSortBy","../internal/compareAscending","../internal/isIterateeCall"],function(e,t,n,r,i){function o(o,a,s){if(null==o)return[];if(s&&i(o,a,s))a=null;var u=-1;a=e(a,s,3);var c=t(o,function(e,t,n){return{criteria:a(e,t,n),index:++u,value:e}});return n(c,r)}return o});

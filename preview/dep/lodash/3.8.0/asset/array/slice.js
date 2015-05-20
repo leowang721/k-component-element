@@ -1,17 +1,2 @@
-define('lodash/array/slice', [
-    '../internal/baseSlice',
-    '../internal/isIterateeCall'
-], function (baseSlice, isIterateeCall) {
-    function slice(array, start, end) {
-        var length = array ? array.length : 0;
-        if (!length) {
-            return [];
-        }
-        if (end && typeof end != 'number' && isIterateeCall(array, start, end)) {
-            start = 0;
-            end = length;
-        }
-        return baseSlice(array, start, end);
-    }
-    return slice;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/slice",["../internal/baseSlice","../internal/isIterateeCall"],function(e,t){function n(n,r,i){var o=n?n.length:0;if(!o)return[];if(i&&"number"!=typeof i&&t(n,r,i))r=0,i=o;return e(n,r,i)}return n});

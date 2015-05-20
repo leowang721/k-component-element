@@ -1,3 +1,2 @@
-define('lodash/collection/detect', ['./find'], function (find) {
-    return find;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/detect",["./find"],function(e){return e});

@@ -1,7 +1,2 @@
-define('lodash/date/now', ['../lang/isNative'], function (isNative) {
-    var nativeNow = isNative(nativeNow = Date.now) && nativeNow;
-    var now = nativeNow || function () {
-            return new Date().getTime();
-        };
-    return now;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/date/now",["../lang/isNative"],function(e){var t=e(t=Date.now)&&t,n=t||function(){return(new Date).getTime()};return n});

@@ -1,9 +1,2 @@
-define('lodash/utility/matchesProperty', [
-    '../internal/baseClone',
-    '../internal/baseMatchesProperty'
-], function (baseClone, baseMatchesProperty) {
-    function matchesProperty(path, value) {
-        return baseMatchesProperty(path, baseClone(value, true));
-    }
-    return matchesProperty;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/matchesProperty",["../internal/baseClone","../internal/baseMatchesProperty"],function(e,n){function t(t,r){return n(t,e(r,!0))}return t});

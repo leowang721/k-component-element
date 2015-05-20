@@ -1,7 +1,2 @@
-define('lodash/object/merge', [
-    '../internal/baseMerge',
-    '../internal/createAssigner'
-], function (baseMerge, createAssigner) {
-    var merge = createAssigner(baseMerge);
-    return merge;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/merge",["../internal/baseMerge","../internal/createAssigner"],function(e,n){var t=n(e);return t});

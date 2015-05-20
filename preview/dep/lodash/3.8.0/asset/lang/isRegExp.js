@@ -1,9 +1,2 @@
-define('lodash/lang/isRegExp', ['../internal/isObjectLike'], function (isObjectLike) {
-    var regexpTag = '[object RegExp]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isRegExp(value) {
-        return isObjectLike(value) && objToString.call(value) == regexpTag;
-    }
-    return isRegExp;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isRegExp",["../internal/isObjectLike"],function(e){function t(t){return e(t)&&i.call(t)==n}var n="[object RegExp]",r=Object.prototype,i=r.toString;return t});

@@ -1,9 +1,2 @@
-define('lodash/internal/getData', [
-    './metaMap',
-    '../utility/noop'
-], function (metaMap, noop) {
-    var getData = !metaMap ? noop : function (func) {
-            return metaMap.get(func);
-        };
-    return getData;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/getData",["./metaMap","../utility/noop"],function(e,t){var n=!e?t:function(t){return e.get(t)};return n});

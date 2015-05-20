@@ -1,6 +1,2 @@
-define('lodash/internal/isObjectLike', [], function () {
-    function isObjectLike(value) {
-        return !!value && typeof value == 'object';
-    }
-    return isObjectLike;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isObjectLike",[],function(){function e(e){return!!e&&"object"==typeof e}return e});

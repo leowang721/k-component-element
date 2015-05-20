@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/theme/clouds_midnight",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 
 exports.isDark = true;

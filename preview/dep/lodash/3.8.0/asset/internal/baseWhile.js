@@ -1,9 +1,2 @@
-define('lodash/internal/baseWhile', ['./baseSlice'], function (baseSlice) {
-    function baseWhile(array, predicate, isDrop, fromRight) {
-        var length = array.length, index = fromRight ? length : -1;
-        while ((fromRight ? index-- : ++index < length) && predicate(array[index], index, array)) {
-        }
-        return isDrop ? baseSlice(array, fromRight ? 0 : index, fromRight ? index + 1 : length) : baseSlice(array, fromRight ? index + 1 : 0, fromRight ? length : index);
-    }
-    return baseWhile;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseWhile",["./baseSlice"],function(e){function t(t,n,r,i){for(var o=t.length,a=i?o:-1;(i?a--:++a<o)&&n(t[a],a,t););return r?e(t,i?0:a,i?a+1:o):e(t,i?a+1:0,i?o:a)}return t});

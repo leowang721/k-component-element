@@ -1,23 +1,2 @@
-define('lodash/object/result', [
-    '../internal/baseGet',
-    '../internal/baseSlice',
-    '../lang/isFunction',
-    '../internal/isKey',
-    '../array/last',
-    '../internal/toPath'
-], function (baseGet, baseSlice, isFunction, isKey, last, toPath) {
-    var undefined;
-    function result(object, path, defaultValue) {
-        var result = object == null ? undefined : object[path];
-        if (result === undefined) {
-            if (object != null && !isKey(path, object)) {
-                path = toPath(path);
-                object = path.length == 1 ? object : baseGet(object, baseSlice(path, 0, -1));
-                result = object == null ? undefined : object[last(path)];
-            }
-            result = result === undefined ? defaultValue : result;
-        }
-        return isFunction(result) ? result.call(object) : result;
-    }
-    return result;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/result",["../internal/baseGet","../internal/baseSlice","../lang/isFunction","../internal/isKey","../array/last","../internal/toPath"],function(e,n,t,r,i,o){function a(a,l,c){var f=null==a?u:a[l];if(f===u){if(null!=a&&!r(l,a))l=o(l),a=1==l.length?a:e(a,n(l,0,-1)),f=null==a?u:a[i(l)];f=f===u?c:f}return t(f)?f.call(a):f}var u;return a});

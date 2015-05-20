@@ -1,9 +1,2 @@
-define('lodash/lang/isString', ['../internal/isObjectLike'], function (isObjectLike) {
-    var stringTag = '[object String]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isString(value) {
-        return typeof value == 'string' || isObjectLike(value) && objToString.call(value) == stringTag;
-    }
-    return isString;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isString",["../internal/isObjectLike"],function(e){function t(t){return"string"==typeof t||e(t)&&i.call(t)==n}var n="[object String]",r=Object.prototype,i=r.toString;return t});

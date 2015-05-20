@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/mode/lsl_highlight_rules', [
     'require',
     'exports',

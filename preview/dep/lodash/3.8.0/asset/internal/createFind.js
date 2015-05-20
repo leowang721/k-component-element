@@ -1,19 +1,2 @@
-define('lodash/internal/createFind', [
-    './baseCallback',
-    './baseFind',
-    './baseFindIndex',
-    '../lang/isArray'
-], function (baseCallback, baseFind, baseFindIndex, isArray) {
-    var undefined;
-    function createFind(eachFunc, fromRight) {
-        return function (collection, predicate, thisArg) {
-            predicate = baseCallback(predicate, thisArg, 3);
-            if (isArray(collection)) {
-                var index = baseFindIndex(collection, predicate, fromRight);
-                return index > -1 ? collection[index] : undefined;
-            }
-            return baseFind(collection, predicate, eachFunc);
-        };
-    }
-    return createFind;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createFind",["./baseCallback","./baseFind","./baseFindIndex","../lang/isArray"],function(e,t,n,r){function i(i,a){return function(u,s,c){if(s=e(s,c,3),r(u)){var l=n(u,s,a);return l>-1?u[l]:o}return t(u,s,i)}}var o;return i});

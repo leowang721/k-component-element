@@ -1,11 +1,2 @@
-define('lodash/function/rearg', [
-    '../internal/baseFlatten',
-    '../internal/createWrapper',
-    './restParam'
-], function (baseFlatten, createWrapper, restParam) {
-    var REARG_FLAG = 256;
-    var rearg = restParam(function (func, indexes) {
-            return createWrapper(func, REARG_FLAG, null, null, null, baseFlatten(indexes));
-        });
-    return rearg;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/rearg",["../internal/baseFlatten","../internal/createWrapper","./restParam"],function(e,t,n){var r=256,i=n(function(n,i){return t(n,r,null,null,null,e(i))});return i});

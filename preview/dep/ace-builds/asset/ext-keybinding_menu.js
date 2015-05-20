@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/ext/menu_tools/overlay_page', [
     'require',
     'exports',

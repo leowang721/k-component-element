@@ -1,9 +1,2 @@
-define('lodash/internal/baseToString', [], function () {
-    function baseToString(value) {
-        if (typeof value == 'string') {
-            return value;
-        }
-        return value == null ? '' : value + '';
-    }
-    return baseToString;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseToString",[],function(){function e(e){if("string"==typeof e)return e;else return null==e?"":e+""}return e});

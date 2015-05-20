@@ -1,5 +1,2 @@
-define('lodash/utility/noop', [], function () {
-    function noop() {
-    }
-    return noop;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/noop",[],function(){function e(){}return e});

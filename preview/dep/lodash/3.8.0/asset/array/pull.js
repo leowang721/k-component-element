@@ -1,19 +1,2 @@
-define('lodash/array/pull', ['../internal/baseIndexOf'], function (baseIndexOf) {
-    var arrayProto = Array.prototype;
-    var splice = arrayProto.splice;
-    function pull() {
-        var args = arguments, array = args[0];
-        if (!(array && array.length)) {
-            return array;
-        }
-        var index = 0, indexOf = baseIndexOf, length = args.length;
-        while (++index < length) {
-            var fromIndex = 0, value = args[index];
-            while ((fromIndex = indexOf(array, value, fromIndex)) > -1) {
-                splice.call(array, fromIndex, 1);
-            }
-        }
-        return array;
-    }
-    return pull;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/pull",["../internal/baseIndexOf"],function(e){function t(){var t=arguments,n=t[0];if(!n||!n.length)return n;for(var i=0,o=e,a=t.length;++i<a;)for(var s=0,u=t[i];(s=o(n,u,s))>-1;)r.call(n,s,1);return n}var n=Array.prototype,r=n.splice;return t});

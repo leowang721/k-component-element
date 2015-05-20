@@ -1,21 +1,2 @@
-define('lodash/lang/isNative', [
-    '../string/escapeRegExp',
-    '../internal/isObjectLike'
-], function (escapeRegExp, isObjectLike) {
-    var funcTag = '[object Function]';
-    var reIsHostCtor = /^\[object .+?Constructor\]$/;
-    var objectProto = Object.prototype;
-    var fnToString = Function.prototype.toString;
-    var objToString = objectProto.toString;
-    var reIsNative = RegExp('^' + escapeRegExp(objToString).replace(/toString|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
-    function isNative(value) {
-        if (value == null) {
-            return false;
-        }
-        if (objToString.call(value) == funcTag) {
-            return reIsNative.test(fnToString.call(value));
-        }
-        return isObjectLike(value) && reIsHostCtor.test(value);
-    }
-    return isNative;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isNative",["../string/escapeRegExp","../internal/isObjectLike"],function(e,t){function n(e){if(null==e)return!1;if(u.call(e)==r)return s.test(a.call(e));else return t(e)&&i.test(e)}var r="[object Function]",i=/^\[object .+?Constructor\]$/,o=Object.prototype,a=Function.prototype.toString,u=o.toString,s=RegExp("^"+e(u).replace(/toString|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");return n});

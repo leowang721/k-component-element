@@ -1,14 +1,2 @@
-define('lodash/utility/attempt', [
-    '../lang/isError',
-    '../function/restParam'
-], function (isError, restParam) {
-    var undefined;
-    var attempt = restParam(function (func, args) {
-            try {
-                return func.apply(undefined, args);
-            } catch (e) {
-                return isError(e) ? e : new Error(e);
-            }
-        });
-    return attempt;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/attempt",["../lang/isError","../function/restParam"],function(e,n){var t,r=n(function(n,r){try{return n.apply(t,r)}catch(i){return e(i)?i:new Error(i)}});return r});

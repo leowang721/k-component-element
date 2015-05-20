@@ -1,15 +1,2 @@
-define('lodash/collection/reject', [
-    '../internal/arrayFilter',
-    '../internal/baseCallback',
-    '../internal/baseFilter',
-    '../lang/isArray'
-], function (arrayFilter, baseCallback, baseFilter, isArray) {
-    function reject(collection, predicate, thisArg) {
-        var func = isArray(collection) ? arrayFilter : baseFilter;
-        predicate = baseCallback(predicate, thisArg, 3);
-        return func(collection, function (value, index, collection) {
-            return !predicate(value, index, collection);
-        });
-    }
-    return reject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/reject",["../internal/arrayFilter","../internal/baseCallback","../internal/baseFilter","../lang/isArray"],function(e,t,n,r){function i(i,o,a){var s=r(i)?e:n;return o=t(o,a,3),s(i,function(e,t,n){return!o(e,t,n)})}return i});

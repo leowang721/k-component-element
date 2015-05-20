@@ -1,16 +1,2 @@
-define('lodash/internal/compareMultiple', ['./baseCompareAscending'], function (baseCompareAscending) {
-    function compareMultiple(object, other, orders) {
-        var index = -1, objCriteria = object.criteria, othCriteria = other.criteria, length = objCriteria.length, ordersLength = orders.length;
-        while (++index < length) {
-            var result = baseCompareAscending(objCriteria[index], othCriteria[index]);
-            if (result) {
-                if (index >= ordersLength) {
-                    return result;
-                }
-                return result * (orders[index] ? 1 : -1);
-            }
-        }
-        return object.index - other.index;
-    }
-    return compareMultiple;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/compareMultiple",["./baseCompareAscending"],function(e){function t(t,n,r){for(var i=-1,o=t.criteria,a=n.criteria,u=o.length,s=r.length;++i<u;){var c=e(o[i],a[i]);if(c)if(i>=s)return c;else return c*(r[i]?1:-1)}return t.index-n.index}return t});

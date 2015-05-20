@@ -1,11 +1,2 @@
-define('lodash/utility/methodOf', [
-    '../internal/invokePath',
-    '../function/restParam'
-], function (invokePath, restParam) {
-    var methodOf = restParam(function (object, args) {
-            return function (path) {
-                return invokePath(object, path, args);
-            };
-        });
-    return methodOf;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/methodOf",["../internal/invokePath","../function/restParam"],function(e,n){var t=n(function(n,t){return function(r){return e(n,r,t)}});return t});

@@ -1,6 +1,2 @@
-define('lodash/function/curry', ['../internal/createCurry'], function (createCurry) {
-    var CURRY_FLAG = 8;
-    var curry = createCurry(CURRY_FLAG);
-    curry.placeholder = {};
-    return curry;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/curry",["../internal/createCurry"],function(e){var t=8,n=e(t);return n.placeholder={},n});

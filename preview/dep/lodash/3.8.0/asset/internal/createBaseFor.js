@@ -1,15 +1,2 @@
-define('lodash/internal/createBaseFor', ['./toObject'], function (toObject) {
-    function createBaseFor(fromRight) {
-        return function (object, iteratee, keysFunc) {
-            var iterable = toObject(object), props = keysFunc(object), length = props.length, index = fromRight ? length : -1;
-            while (fromRight ? index-- : ++index < length) {
-                var key = props[index];
-                if (iteratee(iterable[key], key, iterable) === false) {
-                    break;
-                }
-            }
-            return object;
-        };
-    }
-    return createBaseFor;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createBaseFor",["./toObject"],function(e){function t(t){return function(n,r,i){for(var o=e(n),a=i(n),u=a.length,s=t?u:-1;t?s--:++s<u;){var c=a[s];if(r(o[c],c,o)===!1)break}return n}}return t});

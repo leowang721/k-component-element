@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/snippets/perl",["require","exports","module"], function(require, exports, module) {
 "use strict";
 

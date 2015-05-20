@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/theme/vibrant_ink",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 
 exports.isDark = true;

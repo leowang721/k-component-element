@@ -1,8 +1,2 @@
-define('lodash/internal/baseRandom', [], function () {
-    var floor = Math.floor;
-    var nativeRandom = Math.random;
-    function baseRandom(min, max) {
-        return min + floor(nativeRandom() * (max - min + 1));
-    }
-    return baseRandom;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseRandom",[],function(){function e(e,r){return e+t(n()*(r-e+1))}var t=Math.floor,n=Math.random;return e});

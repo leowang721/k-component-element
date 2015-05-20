@@ -1,20 +1,2 @@
-define('lodash/array/chunk', [
-    '../internal/baseSlice',
-    '../internal/isIterateeCall'
-], function (baseSlice, isIterateeCall) {
-    var ceil = Math.ceil;
-    var nativeMax = Math.max;
-    function chunk(array, size, guard) {
-        if (guard ? isIterateeCall(array, size, guard) : size == null) {
-            size = 1;
-        } else {
-            size = nativeMax(+size || 1, 1);
-        }
-        var index = 0, length = array ? array.length : 0, resIndex = -1, result = Array(ceil(length / size));
-        while (index < length) {
-            result[++resIndex] = baseSlice(array, index, index += size);
-        }
-        return result;
-    }
-    return chunk;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/chunk",["../internal/baseSlice","../internal/isIterateeCall"],function(e,t){function n(n,o,a){if(a?t(n,o,a):null==o)o=1;else o=i(+o||1,1);for(var s=0,u=n?n.length:0,c=-1,l=Array(r(u/o));u>s;)l[++c]=e(n,s,s+=o);return l}var r=Math.ceil,i=Math.max;return n});

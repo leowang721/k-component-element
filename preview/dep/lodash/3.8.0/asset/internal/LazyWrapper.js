@@ -1,19 +1,2 @@
-define('lodash/internal/LazyWrapper', [
-    './baseCreate',
-    './baseLodash'
-], function (baseCreate, baseLodash) {
-    var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-    function LazyWrapper(value) {
-        this.__wrapped__ = value;
-        this.__actions__ = null;
-        this.__dir__ = 1;
-        this.__dropCount__ = 0;
-        this.__filtered__ = false;
-        this.__iteratees__ = null;
-        this.__takeCount__ = POSITIVE_INFINITY;
-        this.__views__ = null;
-    }
-    LazyWrapper.prototype = baseCreate(baseLodash.prototype);
-    LazyWrapper.prototype.constructor = LazyWrapper;
-    return LazyWrapper;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/LazyWrapper",["./baseCreate","./baseLodash"],function(e,t){function n(e){this.__wrapped__=e,this.__actions__=null,this.__dir__=1,this.__dropCount__=0,this.__filtered__=!1,this.__iteratees__=null,this.__takeCount__=r,this.__views__=null}var r=Number.POSITIVE_INFINITY;return n.prototype=e(t.prototype),n.prototype.constructor=n,n});

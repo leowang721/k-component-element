@@ -1,11 +1,2 @@
-define('lodash/internal/isLaziable', [
-    './LazyWrapper',
-    './getFuncName',
-    '../chain/lodash'
-], function (LazyWrapper, getFuncName, lodash) {
-    function isLaziable(func) {
-        var funcName = getFuncName(func);
-        return !!funcName && func === lodash[funcName] && funcName in LazyWrapper.prototype;
-    }
-    return isLaziable;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isLaziable",["./LazyWrapper","./getFuncName","../chain/lodash"],function(e,t,n){function r(r){var i=t(r);return!!i&&r===n[i]&&i in e.prototype}return r});

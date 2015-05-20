@@ -1,22 +1,2 @@
-define('lodash/internal/shimIsPlainObject', [
-    './baseForIn',
-    './isObjectLike'
-], function (baseForIn, isObjectLike) {
-    var undefined;
-    var objectTag = '[object Object]';
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    var objToString = objectProto.toString;
-    function shimIsPlainObject(value) {
-        var Ctor;
-        if (!(isObjectLike(value) && objToString.call(value) == objectTag) || !hasOwnProperty.call(value, 'constructor') && (Ctor = value.constructor, typeof Ctor == 'function' && !(Ctor instanceof Ctor))) {
-            return false;
-        }
-        var result;
-        baseForIn(value, function (subValue, key) {
-            result = key;
-        });
-        return result === undefined || hasOwnProperty.call(value, result);
-    }
-    return shimIsPlainObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/shimIsPlainObject",["./baseForIn","./isObjectLike"],function(e,t){function n(n){var o;if(!t(n)||u.call(n)!=i||!a.call(n,"constructor")&&(o=n.constructor,"function"==typeof o&&!(o instanceof o)))return!1;var s;return e(n,function(e,t){s=t}),s===r||a.call(n,s)}var r,i="[object Object]",o=Object.prototype,a=o.hasOwnProperty,u=o.toString;return n});

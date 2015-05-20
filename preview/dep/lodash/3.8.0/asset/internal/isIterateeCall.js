@@ -1,18 +1,2 @@
-define('lodash/internal/isIterateeCall', [
-    './isArrayLike',
-    './isIndex',
-    '../lang/isObject'
-], function (isArrayLike, isIndex, isObject) {
-    function isIterateeCall(value, index, object) {
-        if (!isObject(object)) {
-            return false;
-        }
-        var type = typeof index;
-        if (type == 'number' ? isArrayLike(object) && isIndex(index, object.length) : type == 'string' && index in object) {
-            var other = object[index];
-            return value === value ? value === other : other !== other;
-        }
-        return false;
-    }
-    return isIterateeCall;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isIterateeCall",["./isArrayLike","./isIndex","../lang/isObject"],function(e,t,n){function r(r,i,o){if(!n(o))return!1;var a=typeof i;if("number"==a?e(o)&&t(i,o.length):"string"==a&&i in o){var u=o[i];return r===r?r===u:u!==u}return!1}return r});

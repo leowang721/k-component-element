@@ -1,18 +1,2 @@
-define('lodash/internal/createPadding', [
-    '../string/repeat',
-    './root'
-], function (repeat, root) {
-    var ceil = Math.ceil;
-    var nativeIsFinite = root.isFinite;
-    function createPadding(string, length, chars) {
-        var strLength = string.length;
-        length = +length;
-        if (strLength >= length || !nativeIsFinite(length)) {
-            return '';
-        }
-        var padLength = length - strLength;
-        chars = chars == null ? ' ' : chars + '';
-        return repeat(chars, ceil(padLength / chars.length)).slice(0, padLength);
-    }
-    return createPadding;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createPadding",["../string/repeat","./root"],function(e,t){function n(t,n,o){var a=t.length;if(n=+n,a>=n||!i(n))return"";var u=n-a;return o=null==o?" ":o+"",e(o,r(u/o.length)).slice(0,u)}var r=Math.ceil,i=t.isFinite;return n});

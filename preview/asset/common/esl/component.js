@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("component",["require","k-component/registry"],function(require){var e=require("k-component/registry"),n={load:function(n,t,r){require([n],function(n){e.registerFromHTML(n),r(n)})}};return n});

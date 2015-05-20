@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component-element/MarkAction",["require","eoo","k-component/Action"],function(require){var e={initialize:function(){this.el.attr("hidden","");var e=this.el.parent()[0];if(e.tagName&&"content"===e.tagName.toLowerCase())e=e.parentNode;var t=!1;if(e.host)e=e.host,t=!0;else if("fake-shadow-root"===e.tagName.toLowerCase())e=e.parentNode;if(this.host=this.$(e),t)this.$host=this.$(e.shadowRoot);else this.$host=this.host}},t=require("eoo").create(require("k-component/Action"),e);return t});

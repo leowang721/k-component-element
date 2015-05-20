@@ -1,9 +1,2 @@
-define('lodash/collection/pluck', [
-    './map',
-    '../utility/property'
-], function (map, property) {
-    function pluck(collection, path) {
-        return map(collection, property(path));
-    }
-    return pluck;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/pluck",["./map","../utility/property"],function(e,t){function n(n,r){return e(n,t(r))}return n});

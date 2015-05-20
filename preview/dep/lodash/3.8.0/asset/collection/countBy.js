@@ -1,8 +1,2 @@
-define('lodash/collection/countBy', ['../internal/createAggregator'], function (createAggregator) {
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    var countBy = createAggregator(function (result, value, key) {
-            hasOwnProperty.call(result, key) ? ++result[key] : result[key] = 1;
-        });
-    return countBy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/countBy",["../internal/createAggregator"],function(e){var t=Object.prototype,n=t.hasOwnProperty,r=e(function(e,t,r){n.call(e,r)?++e[r]:e[r]=1});return r});

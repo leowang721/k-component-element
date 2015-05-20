@@ -1,19 +1,2 @@
-define('lodash/internal/baseAt', [
-    './isArrayLike',
-    './isIndex'
-], function (isArrayLike, isIndex) {
-    var undefined;
-    function baseAt(collection, props) {
-        var index = -1, isNil = collection == null, isArr = !isNil && isArrayLike(collection), length = isArr && collection.length, propsLength = props.length, result = Array(propsLength);
-        while (++index < propsLength) {
-            var key = props[index];
-            if (isArr) {
-                result[index] = isIndex(key, length) ? collection[key] : undefined;
-            } else {
-                result[index] = isNil ? undefined : collection[key];
-            }
-        }
-        return result;
-    }
-    return baseAt;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseAt",["./isArrayLike","./isIndex"],function(e,t){function n(n,i){for(var o=-1,a=null==n,s=!a&&e(n),u=s&&n.length,c=i.length,l=Array(c);++o<c;){var f=i[o];if(s)l[o]=t(f,u)?n[f]:r;else l[o]=a?r:n[f]}return l}var r;return n});

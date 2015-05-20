@@ -1,3 +1,2 @@
-define('lodash/array/unique', ['./uniq'], function (uniq) {
-    return uniq;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/unique",["./uniq"],function(e){return e});

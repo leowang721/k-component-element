@@ -1,10 +1,2 @@
-define('lodash/internal/arraySum', [], function () {
-    function arraySum(array) {
-        var length = array.length, result = 0;
-        while (length--) {
-            result += +array[length] || 0;
-        }
-        return result;
-    }
-    return arraySum;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arraySum",[],function(){function e(e){for(var t=e.length,n=0;t--;)n+=+e[t]||0;return n}return e});

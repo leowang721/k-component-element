@@ -1,12 +1,2 @@
-define('lodash/internal/createCtorWrapper', [
-    './baseCreate',
-    '../lang/isObject'
-], function (baseCreate, isObject) {
-    function createCtorWrapper(Ctor) {
-        return function () {
-            var thisBinding = baseCreate(Ctor.prototype), result = Ctor.apply(thisBinding, arguments);
-            return isObject(result) ? result : thisBinding;
-        };
-    }
-    return createCtorWrapper;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createCtorWrapper",["./baseCreate","../lang/isObject"],function(e,t){function n(n){return function(){var r=e(n.prototype),i=n.apply(r,arguments);return t(i)?i:r}}return n});

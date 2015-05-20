@@ -1,20 +1,2 @@
-define('lodash/collection/sample', [
-    '../internal/baseRandom',
-    '../internal/isIterateeCall',
-    './shuffle',
-    '../internal/toIterable'
-], function (baseRandom, isIterateeCall, shuffle, toIterable) {
-    var undefined;
-    var nativeMin = Math.min;
-    function sample(collection, n, guard) {
-        if (guard ? isIterateeCall(collection, n, guard) : n == null) {
-            collection = toIterable(collection);
-            var length = collection.length;
-            return length > 0 ? collection[baseRandom(0, length - 1)] : undefined;
-        }
-        var result = shuffle(collection);
-        result.length = nativeMin(n < 0 ? 0 : +n || 0, result.length);
-        return result;
-    }
-    return sample;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/sample",["../internal/baseRandom","../internal/isIterateeCall","./shuffle","../internal/toIterable"],function(e,t,n,r){function i(i,s,u){if(u?t(i,s,u):null==s){i=r(i);var c=i.length;return c>0?i[e(0,c-1)]:o}var l=n(i);return l.length=a(0>s?0:+s||0,l.length),l}var o,a=Math.min;return i});

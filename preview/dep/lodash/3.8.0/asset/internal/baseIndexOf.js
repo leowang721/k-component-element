@@ -1,15 +1,2 @@
-define('lodash/internal/baseIndexOf', ['./indexOfNaN'], function (indexOfNaN) {
-    function baseIndexOf(array, value, fromIndex) {
-        if (value !== value) {
-            return indexOfNaN(array, fromIndex);
-        }
-        var index = fromIndex - 1, length = array.length;
-        while (++index < length) {
-            if (array[index] === value) {
-                return index;
-            }
-        }
-        return -1;
-    }
-    return baseIndexOf;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseIndexOf",["./indexOfNaN"],function(e){function t(t,n,r){if(n!==n)return e(t,r);for(var i=r-1,o=t.length;++i<o;)if(t[i]===n)return i;return-1}return t});

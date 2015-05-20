@@ -1,11 +1,2 @@
-define('lodash/internal/cachePush', ['../lang/isObject'], function (isObject) {
-    function cachePush(value) {
-        var data = this.data;
-        if (typeof value == 'string' || isObject(value)) {
-            data.set.add(value);
-        } else {
-            data.hash[value] = true;
-        }
-    }
-    return cachePush;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/cachePush",["../lang/isObject"],function(e){function t(t){var n=this.data;if("string"==typeof t||e(t))n.set.add(t);else n.hash[t]=!0}return t});

@@ -1,7 +1,2 @@
-define('lodash/string/camelCase', ['../internal/createCompounder'], function (createCompounder) {
-    var camelCase = createCompounder(function (result, word, index) {
-            word = word.toLowerCase();
-            return result + (index ? word.charAt(0).toUpperCase() + word.slice(1) : word);
-        });
-    return camelCase;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/camelCase",["../internal/createCompounder"],function(e){var n=e(function(e,n,t){return n=n.toLowerCase(),e+(t?n.charAt(0).toUpperCase()+n.slice(1):n)});return n});

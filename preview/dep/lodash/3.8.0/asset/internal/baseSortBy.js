@@ -1,11 +1,2 @@
-define('lodash/internal/baseSortBy', [], function () {
-    function baseSortBy(array, comparer) {
-        var length = array.length;
-        array.sort(comparer);
-        while (length--) {
-            array[length] = array[length].value;
-        }
-        return array;
-    }
-    return baseSortBy;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseSortBy",[],function(){function e(e,t){var n=e.length;for(e.sort(t);n--;)e[n]=e[n].value;return e}return e});

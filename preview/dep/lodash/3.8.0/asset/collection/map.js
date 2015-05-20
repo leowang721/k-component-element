@@ -1,13 +1,2 @@
-define('lodash/collection/map', [
-    '../internal/arrayMap',
-    '../internal/baseCallback',
-    '../internal/baseMap',
-    '../lang/isArray'
-], function (arrayMap, baseCallback, baseMap, isArray) {
-    function map(collection, iteratee, thisArg) {
-        var func = isArray(collection) ? arrayMap : baseMap;
-        iteratee = baseCallback(iteratee, thisArg, 3);
-        return func(collection, iteratee);
-    }
-    return map;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/map",["../internal/arrayMap","../internal/baseCallback","../internal/baseMap","../lang/isArray"],function(e,t,n,r){function i(i,o,a){var s=r(i)?e:n;return o=t(o,a,3),s(i,o)}return i});

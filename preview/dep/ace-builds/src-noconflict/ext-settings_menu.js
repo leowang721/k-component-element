@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/ext/menu_tools/element_generator",["require","exports","module"], function(require, exports, module) {
 'use strict';
 module.exports.createOption = function createOption (obj) {

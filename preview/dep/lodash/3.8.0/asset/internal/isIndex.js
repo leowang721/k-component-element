@@ -1,9 +1,2 @@
-define('lodash/internal/isIndex', [], function () {
-    var MAX_SAFE_INTEGER = Math.pow(2, 53) - 1;
-    function isIndex(value, length) {
-        value = +value;
-        length = length == null ? MAX_SAFE_INTEGER : length;
-        return value > -1 && value % 1 == 0 && value < length;
-    }
-    return isIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isIndex",[],function(){function e(e,n){return e=+e,n=null==n?t:n,e>-1&&e%1==0&&n>e}var t=Math.pow(2,53)-1;return e});

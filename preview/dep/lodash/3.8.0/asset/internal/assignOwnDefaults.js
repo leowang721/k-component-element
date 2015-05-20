@@ -1,9 +1,2 @@
-define('lodash/internal/assignOwnDefaults', [], function () {
-    var undefined;
-    var objectProto = Object.prototype;
-    var hasOwnProperty = objectProto.hasOwnProperty;
-    function assignOwnDefaults(objectValue, sourceValue, key, object) {
-        return objectValue === undefined || !hasOwnProperty.call(object, key) ? sourceValue : objectValue;
-    }
-    return assignOwnDefaults;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/assignOwnDefaults",[],function(){function e(e,n,i,o){return e===t||!r.call(o,i)?n:e}var t,n=Object.prototype,r=n.hasOwnProperty;return e});

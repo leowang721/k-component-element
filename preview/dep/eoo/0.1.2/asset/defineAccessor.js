@@ -1,27 +1,2 @@
-void function (define, undefined) {
-    define('eoo/defineAccessor', ['require'], function (require) {
-        var MEMBERS = '__eooPrivateMembers__';
-        function simpleGetter(name) {
-            var body = 'return typeof this.' + MEMBERS + ' === \'object\' ? this.' + MEMBERS + '[\'' + name + '\'] : undefined;';
-            return new Function(body);
-        }
-        function simpleSetter(name) {
-            var body = 'this.' + MEMBERS + ' = this.' + MEMBERS + ' || {};\n' + 'this.' + MEMBERS + '[\'' + name + '\'] = value;';
-            return new Function('value', body);
-        }
-        return function (obj, name, accessor) {
-            var upperName = name.charAt(0).toUpperCase() + name.slice(1);
-            var getter = 'get' + upperName;
-            var setter = 'set' + upperName;
-            if (!accessor) {
-                obj[getter] = !accessor || typeof accessor.get !== 'function' ? simpleGetter(name) : accessor.get;
-                obj[setter] = !accessor || typeof accessor.set !== 'function' ? simpleSetter(name) : accessor.set;
-            } else {
-                typeof accessor.get === 'function' && (obj[getter] = accessor.get);
-                typeof accessor.set === 'function' && (obj[setter] = accessor.set);
-            }
-        };
-    });
-}(typeof define === 'function' && define.amd ? define : function (factory) {
-    module.exports = factory(require);
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+void function(e){e(["require"],function(){function e(e){var t="return typeof this."+n+" === 'object' ? this."+n+"['"+e+"'] : undefined;";return new Function(t)}function t(e){var t="this."+n+" = this."+n+" || {};\nthis."+n+"['"+e+"'] = value;";return new Function("value",t)}var n="__eooPrivateMembers__";return function(n,r,i){var o=r.charAt(0).toUpperCase()+r.slice(1),a="get"+o,s="set"+o;if(!i)n[a]=!i||"function"!=typeof i.get?e(r):i.get,n[s]=!i||"function"!=typeof i.set?t(r):i.set;else"function"==typeof i.get&&(n[a]=i.get),"function"==typeof i.set&&(n[s]=i.set)}})}("function"==typeof define&&define.amd?define:function(e){module.exports=e(require)});

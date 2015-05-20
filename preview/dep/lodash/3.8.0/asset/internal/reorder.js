@@ -1,16 +1,2 @@
-define('lodash/internal/reorder', [
-    './arrayCopy',
-    './isIndex'
-], function (arrayCopy, isIndex) {
-    var undefined;
-    var nativeMin = Math.min;
-    function reorder(array, indexes) {
-        var arrLength = array.length, length = nativeMin(indexes.length, arrLength), oldArray = arrayCopy(array);
-        while (length--) {
-            var index = indexes[length];
-            array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
-        }
-        return array;
-    }
-    return reorder;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/reorder",["./arrayCopy","./isIndex"],function(e,t){function n(n,o){for(var a=n.length,u=i(o.length,a),s=e(n);u--;){var c=o[u];n[u]=t(c,a)?s[c]:r}return n}var r,i=Math.min;return n});

@@ -1,7 +1,2 @@
-define('lodash/lang/isObject', [], function () {
-    function isObject(value) {
-        var type = typeof value;
-        return type == 'function' || !!value && type == 'object';
-    }
-    return isObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isObject",[],function(){function e(e){var t=typeof e;return"function"==t||!!e&&"object"==t}return e});

@@ -1,9 +1,2 @@
-define('lodash/internal/charsLeftIndex', [], function () {
-    function charsLeftIndex(string, chars) {
-        var index = -1, length = string.length;
-        while (++index < length && chars.indexOf(string.charAt(index)) > -1) {
-        }
-        return index;
-    }
-    return charsLeftIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/charsLeftIndex",[],function(){function e(e,t){for(var n=-1,r=e.length;++n<r&&t.indexOf(e.charAt(n))>-1;);return n}return e});

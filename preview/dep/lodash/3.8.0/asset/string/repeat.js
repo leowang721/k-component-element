@@ -1,24 +1,2 @@
-define('lodash/string/repeat', [
-    '../internal/baseToString',
-    '../internal/root'
-], function (baseToString, root) {
-    var floor = Math.floor;
-    var nativeIsFinite = root.isFinite;
-    function repeat(string, n) {
-        var result = '';
-        string = baseToString(string);
-        n = +n;
-        if (n < 1 || !string || !nativeIsFinite(n)) {
-            return result;
-        }
-        do {
-            if (n % 2) {
-                result += string;
-            }
-            n = floor(n / 2);
-            string += string;
-        } while (n);
-        return result;
-    }
-    return repeat;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/repeat",["../internal/baseToString","../internal/root"],function(e,n){function t(n,t){var o="";if(n=e(n),t=+t,1>t||!n||!i(t))return o;do{if(t%2)o+=n;t=r(t/2),n+=n}while(t);return o}var r=Math.floor,i=n.isFinite;return t});

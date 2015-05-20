@@ -1,8 +1,2 @@
-define('lodash/utility/uniqueId', ['../internal/baseToString'], function (baseToString) {
-    var idCounter = 0;
-    function uniqueId(prefix) {
-        var id = ++idCounter;
-        return baseToString(prefix) + id;
-    }
-    return uniqueId;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/uniqueId",["../internal/baseToString"],function(e){function n(n){var r=++t;return e(n)+r}var t=0;return n});

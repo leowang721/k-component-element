@@ -1,11 +1,2 @@
-define('lodash/string/unescape', [
-    '../internal/baseToString',
-    '../internal/unescapeHtmlChar'
-], function (baseToString, unescapeHtmlChar) {
-    var reEscapedHtml = /&(?:amp|lt|gt|quot|#39|#96);/g, reHasEscapedHtml = RegExp(reEscapedHtml.source);
-    function unescape(string) {
-        string = baseToString(string);
-        return string && reHasEscapedHtml.test(string) ? string.replace(reEscapedHtml, unescapeHtmlChar) : string;
-    }
-    return unescape;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/unescape",["../internal/baseToString","../internal/unescapeHtmlChar"],function(e,n){function t(t){return t=e(t),t&&i.test(t)?t.replace(r,n):t}var r=/&(?:amp|lt|gt|quot|#39|#96);/g,i=RegExp(r.source);return t});

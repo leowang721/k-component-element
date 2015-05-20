@@ -1,7 +1,2 @@
-define('lodash/object/findLastKey', [
-    '../internal/baseForOwnRight',
-    '../internal/createFindKey'
-], function (baseForOwnRight, createFindKey) {
-    var findLastKey = createFindKey(baseForOwnRight);
-    return findLastKey;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/findLastKey",["../internal/baseForOwnRight","../internal/createFindKey"],function(e,n){var t=n(e);return t});

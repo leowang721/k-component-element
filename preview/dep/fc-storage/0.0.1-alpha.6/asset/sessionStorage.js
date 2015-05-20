@@ -1,26 +1,2 @@
-define('fc-storage/sessionStorage', [
-    'require',
-    'underscore',
-    'fc-core',
-    './util',
-    './memory'
-], function (require) {
-    'use strict';
-    var _ = require('underscore');
-    var fc = require('fc-core');
-    var util = require('./util');
-    var storage = window.sessionStorage;
-    if (!storage) {
-        var fallback = require('./memory').createInstance();
-        fallback.supported = false;
-        return fallback;
-    }
-    var isIE8 = typeof window.document.createElement !== 'function';
-    var storageCtrl = {
-            supported: true,
-            isIE8: isIE8
-        };
-    _.extend(storageCtrl, util.getExtendedStorageMethods(storage));
-    fc.EventTarget.enable(storageCtrl);
-    return storageCtrl;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("fc-storage/sessionStorage",["require","underscore","fc-core","./util","./memory"],function(require){"use strict";var e=require("underscore"),t=require("fc-core"),n=require("./util"),r=window.sessionStorage;if(!r){var i=require("./memory").createInstance();return i.supported=!1,i}var o="function"!=typeof window.document.createElement,s={supported:!0,isIE8:o};return e.extend(s,n.getExtendedStorageMethods(r)),t.EventTarget.enable(s),s});

@@ -1,15 +1,2 @@
-define('lodash/internal/MapCache', [
-    './mapDelete',
-    './mapGet',
-    './mapHas',
-    './mapSet'
-], function (mapDelete, mapGet, mapHas, mapSet) {
-    function MapCache() {
-        this.__data__ = {};
-    }
-    MapCache.prototype['delete'] = mapDelete;
-    MapCache.prototype.get = mapGet;
-    MapCache.prototype.has = mapHas;
-    MapCache.prototype.set = mapSet;
-    return MapCache;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/MapCache",["./mapDelete","./mapGet","./mapHas","./mapSet"],function(e,t,n,r){function i(){this.__data__={}}return i.prototype["delete"]=e,i.prototype.get=t,i.prototype.has=n,i.prototype.set=r,i});

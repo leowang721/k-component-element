@@ -1,6 +1,2 @@
-define('lodash/internal/isSpace', [], function () {
-    function isSpace(charCode) {
-        return charCode <= 160 && (charCode >= 9 && charCode <= 13) || charCode == 32 || charCode == 160 || charCode == 5760 || charCode == 6158 || charCode >= 8192 && (charCode <= 8202 || charCode == 8232 || charCode == 8233 || charCode == 8239 || charCode == 8287 || charCode == 12288 || charCode == 65279);
-    }
-    return isSpace;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/isSpace",[],function(){function e(e){return 160>=e&&e>=9&&13>=e||32==e||160==e||5760==e||6158==e||e>=8192&&(8202>=e||8232==e||8233==e||8239==e||8287==e||12288==e||65279==e)}return e});

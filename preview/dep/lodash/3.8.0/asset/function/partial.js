@@ -1,6 +1,2 @@
-define('lodash/function/partial', ['../internal/createPartial'], function (createPartial) {
-    var PARTIAL_FLAG = 32;
-    var partial = createPartial(PARTIAL_FLAG);
-    partial.placeholder = {};
-    return partial;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/partial",["../internal/createPartial"],function(e){var t=32,n=e(t);return n.placeholder={},n});

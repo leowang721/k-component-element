@@ -1,11 +1,2 @@
-define('lodash/internal/baseEvery', ['./baseEach'], function (baseEach) {
-    function baseEvery(collection, predicate) {
-        var result = true;
-        baseEach(collection, function (value, index, collection) {
-            result = !!predicate(value, index, collection);
-            return result;
-        });
-        return result;
-    }
-    return baseEvery;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseEvery",["./baseEach"],function(e){function t(t,n){var r=!0;return e(t,function(e,t,i){return r=!!n(e,t,i)}),r}return t});

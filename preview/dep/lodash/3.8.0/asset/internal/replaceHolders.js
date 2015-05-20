@@ -1,14 +1,2 @@
-define('lodash/internal/replaceHolders', [], function () {
-    var PLACEHOLDER = '__lodash_placeholder__';
-    function replaceHolders(array, placeholder) {
-        var index = -1, length = array.length, resIndex = -1, result = [];
-        while (++index < length) {
-            if (array[index] === placeholder) {
-                array[index] = PLACEHOLDER;
-                result[++resIndex] = index;
-            }
-        }
-        return result;
-    }
-    return replaceHolders;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/replaceHolders",[],function(){function e(e,n){for(var r=-1,i=e.length,o=-1,a=[];++r<i;)if(e[r]===n)e[r]=t,a[++o]=r;return a}var t="__lodash_placeholder__";return e});

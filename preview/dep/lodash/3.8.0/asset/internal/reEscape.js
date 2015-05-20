@@ -1,4 +1,2 @@
-define('lodash/internal/reEscape', [], function () {
-    var reEscape = /<%-([\s\S]+?)%>/g;
-    return reEscape;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/reEscape",[],function(){var e=/<%-([\s\S]+?)%>/g;return e});

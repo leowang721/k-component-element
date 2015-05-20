@@ -1,3 +1,2 @@
-define('lodash/array/object', ['./zipObject'], function (zipObject) {
-    return zipObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/object",["./zipObject"],function(e){return e});

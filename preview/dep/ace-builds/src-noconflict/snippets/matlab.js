@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/snippets/matlab",["require","exports","module"], function(require, exports, module) {
 "use strict";
 

@@ -1,17 +1,2 @@
-define('lodash/internal/createCurry', [
-    './createWrapper',
-    './isIterateeCall'
-], function (createWrapper, isIterateeCall) {
-    function createCurry(flag) {
-        function curryFunc(func, arity, guard) {
-            if (guard && isIterateeCall(func, arity, guard)) {
-                arity = null;
-            }
-            var result = createWrapper(func, flag, null, null, null, null, null, arity);
-            result.placeholder = curryFunc.placeholder;
-            return result;
-        }
-        return curryFunc;
-    }
-    return createCurry;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createCurry",["./createWrapper","./isIterateeCall"],function(e,t){function n(n){function r(i,o,a){if(a&&t(i,o,a))o=null;var u=e(i,n,null,null,null,null,null,o);return u.placeholder=r.placeholder,u}return r}return n});

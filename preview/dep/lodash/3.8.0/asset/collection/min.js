@@ -1,3 +1,2 @@
-define('lodash/collection/min', ['../math/min'], function (min) {
-    return min;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/min",["../math/min"],function(e){return e});

@@ -1,11 +1,2 @@
-define('lodash/utility/propertyOf', [
-    '../internal/baseGet',
-    '../internal/toPath'
-], function (baseGet, toPath) {
-    function propertyOf(object) {
-        return function (path) {
-            return baseGet(object, toPath(path), path + '');
-        };
-    }
-    return propertyOf;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/utility/propertyOf",["../internal/baseGet","../internal/toPath"],function(e,n){function t(t){return function(r){return e(t,n(r),r+"")}}return t});

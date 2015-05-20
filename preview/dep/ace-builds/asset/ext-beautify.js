@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 define('ace/ext/beautify/php_rules', [
     'require',
     'exports',

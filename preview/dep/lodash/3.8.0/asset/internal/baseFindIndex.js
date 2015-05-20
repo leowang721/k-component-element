@@ -1,12 +1,2 @@
-define('lodash/internal/baseFindIndex', [], function () {
-    function baseFindIndex(array, predicate, fromRight) {
-        var length = array.length, index = fromRight ? length : -1;
-        while (fromRight ? index-- : ++index < length) {
-            if (predicate(array[index], index, array)) {
-                return index;
-            }
-        }
-        return -1;
-    }
-    return baseFindIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseFindIndex",[],function(){function e(e,t,n){for(var r=e.length,i=n?r:-1;n?i--:++i<r;)if(t(e[i],i,e))return i;return-1}return e});

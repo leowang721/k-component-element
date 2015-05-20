@@ -1,13 +1,2 @@
-define('lodash/internal/baseIsEqual', ['./baseIsEqualDeep'], function (baseIsEqualDeep) {
-    function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
-        if (value === other) {
-            return true;
-        }
-        var valType = typeof value, othType = typeof other;
-        if (valType != 'function' && valType != 'object' && othType != 'function' && othType != 'object' || value == null || other == null) {
-            return value !== value && other !== other;
-        }
-        return baseIsEqualDeep(value, other, baseIsEqual, customizer, isLoose, stackA, stackB);
-    }
-    return baseIsEqual;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseIsEqual",["./baseIsEqualDeep"],function(e){function t(n,r,i,o,a,u){if(n===r)return!0;var s=typeof n,c=typeof r;if("function"!=s&&"object"!=s&&"function"!=c&&"object"!=c||null==n||null==r)return n!==n&&r!==r;else return e(n,r,t,i,o,a,u)}return t});

@@ -1,17 +1,2 @@
-define('lodash/internal/baseGet', ['./toObject'], function (toObject) {
-    var undefined;
-    function baseGet(object, path, pathKey) {
-        if (object == null) {
-            return;
-        }
-        if (pathKey !== undefined && pathKey in toObject(object)) {
-            path = [pathKey];
-        }
-        var index = -1, length = path.length;
-        while (object != null && ++index < length) {
-            object = object[path[index]];
-        }
-        return index && index == length ? object : undefined;
-    }
-    return baseGet;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseGet",["./toObject"],function(e){function t(t,r,i){if(null!=t){if(i!==n&&i in e(t))r=[i];for(var o=-1,a=r.length;null!=t&&++o<a;)t=t[r[o]];return o&&o==a?t:n}}var n;return t});

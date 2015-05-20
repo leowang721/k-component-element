@@ -1,16 +1,2 @@
-define('lodash/internal/basePullAt', ['./isIndex'], function (isIndex) {
-    var arrayProto = Array.prototype;
-    var splice = arrayProto.splice;
-    function basePullAt(array, indexes) {
-        var length = array ? indexes.length : 0;
-        while (length--) {
-            var index = parseFloat(indexes[length]);
-            if (index != previous && isIndex(index)) {
-                var previous = index;
-                splice.call(array, index, 1);
-            }
-        }
-        return array;
-    }
-    return basePullAt;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/basePullAt",["./isIndex"],function(e){function t(t,n){for(var i=t?n.length:0;i--;){var o=parseFloat(n[i]);if(o!=a&&e(o)){var a=o;r.call(t,o,1)}}return t}var n=Array.prototype,r=n.splice;return t});

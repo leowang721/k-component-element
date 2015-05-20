@@ -1,13 +1,2 @@
-define('lodash/internal/baseFind', [], function () {
-    function baseFind(collection, predicate, eachFunc, retKey) {
-        var result;
-        eachFunc(collection, function (value, key, collection) {
-            if (predicate(value, key, collection)) {
-                result = retKey ? key : value;
-                return false;
-            }
-        });
-        return result;
-    }
-    return baseFind;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseFind",[],function(){function e(e,t,n,r){var i;return n(e,function(e,n,o){if(t(e,n,o))return i=r?n:e,!1;else return void 0}),i}return e});

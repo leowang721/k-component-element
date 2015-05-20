@@ -1,17 +1,2 @@
-define('lodash/internal/composeArgs', [], function () {
-    var nativeMax = Math.max;
-    function composeArgs(args, partials, holders) {
-        var holdersLength = holders.length, argsIndex = -1, argsLength = nativeMax(args.length - holdersLength, 0), leftIndex = -1, leftLength = partials.length, result = Array(argsLength + leftLength);
-        while (++leftIndex < leftLength) {
-            result[leftIndex] = partials[leftIndex];
-        }
-        while (++argsIndex < holdersLength) {
-            result[holders[argsIndex]] = args[argsIndex];
-        }
-        while (argsLength--) {
-            result[leftIndex++] = args[argsIndex++];
-        }
-        return result;
-    }
-    return composeArgs;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/composeArgs",[],function(){function e(e,n,r){for(var i=r.length,o=-1,a=t(e.length-i,0),u=-1,s=n.length,c=Array(a+s);++u<s;)c[u]=n[u];for(;++o<i;)c[r[o]]=e[o];for(;a--;)c[u++]=e[o++];return c}var t=Math.max;return e});

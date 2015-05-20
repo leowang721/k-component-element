@@ -1,3 +1,2 @@
-define('lodash/object/methods', ['./functions'], function (functions) {
-    return functions;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/methods",["./functions"],function(e){return e});

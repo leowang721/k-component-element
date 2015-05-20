@@ -1,12 +1,2 @@
-define('lodash/internal/createSortedIndex', [
-    './baseCallback',
-    './binaryIndex',
-    './binaryIndexBy'
-], function (baseCallback, binaryIndex, binaryIndexBy) {
-    function createSortedIndex(retHighest) {
-        return function (array, value, iteratee, thisArg) {
-            return iteratee == null ? binaryIndex(array, value, retHighest) : binaryIndexBy(array, value, baseCallback(iteratee, thisArg, 1), retHighest);
-        };
-    }
-    return createSortedIndex;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createSortedIndex",["./baseCallback","./binaryIndex","./binaryIndexBy"],function(e,t,n){function r(r){return function(i,o,a,u){return null==a?t(i,o,r):n(i,o,e(a,u,1),r)}}return r});

@@ -1,13 +1,2 @@
-define('lodash/internal/baseDelay', [], function () {
-    var undefined;
-    var FUNC_ERROR_TEXT = 'Expected a function';
-    function baseDelay(func, wait, args) {
-        if (typeof func != 'function') {
-            throw new TypeError(FUNC_ERROR_TEXT);
-        }
-        return setTimeout(function () {
-            func.apply(undefined, args);
-        }, wait);
-    }
-    return baseDelay;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseDelay",[],function(){function e(e,r,i){if("function"!=typeof e)throw new TypeError(n);return setTimeout(function(){e.apply(t,i)},r)}var t,n="Expected a function";return e});

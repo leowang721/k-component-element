@@ -1,17 +1,2 @@
-define('lodash/lang/isElement', [
-    '../internal/isObjectLike',
-    './isPlainObject',
-    '../support'
-], function (isObjectLike, isPlainObject, support) {
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isElement(value) {
-        return !!value && value.nodeType === 1 && isObjectLike(value) && objToString.call(value).indexOf('Element') > -1;
-    }
-    if (!support.dom) {
-        isElement = function (value) {
-            return !!value && value.nodeType === 1 && isObjectLike(value) && !isPlainObject(value);
-        };
-    }
-    return isElement;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isElement",["../internal/isObjectLike","./isPlainObject","../support"],function(e,t,n){function r(t){return!!t&&1===t.nodeType&&e(t)&&o.call(t).indexOf("Element")>-1}var i=Object.prototype,o=i.toString;if(!n.dom)r=function(n){return!!n&&1===n.nodeType&&e(n)&&!t(n)};return r});

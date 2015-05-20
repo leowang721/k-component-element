@@ -1,13 +1,2 @@
-define('lodash/internal/baseFunctions', ['../lang/isFunction'], function (isFunction) {
-    function baseFunctions(object, props) {
-        var index = -1, length = props.length, resIndex = -1, result = [];
-        while (++index < length) {
-            var key = props[index];
-            if (isFunction(object[key])) {
-                result[++resIndex] = key;
-            }
-        }
-        return result;
-    }
-    return baseFunctions;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/baseFunctions",["../lang/isFunction"],function(e){function t(t,n){for(var r=-1,i=n.length,o=-1,a=[];++r<i;){var u=n[r];if(e(t[u]))a[++o]=u}return a}return t});

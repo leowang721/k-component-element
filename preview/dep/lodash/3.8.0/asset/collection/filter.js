@@ -1,13 +1,2 @@
-define('lodash/collection/filter', [
-    '../internal/arrayFilter',
-    '../internal/baseCallback',
-    '../internal/baseFilter',
-    '../lang/isArray'
-], function (arrayFilter, baseCallback, baseFilter, isArray) {
-    function filter(collection, predicate, thisArg) {
-        var func = isArray(collection) ? arrayFilter : baseFilter;
-        predicate = baseCallback(predicate, thisArg, 3);
-        return func(collection, predicate);
-    }
-    return filter;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/filter",["../internal/arrayFilter","../internal/baseCallback","../internal/baseFilter","../lang/isArray"],function(e,t,n,r){function i(i,o,a){var s=r(i)?e:n;return o=t(o,a,3),s(i,o)}return i});

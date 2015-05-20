@@ -1,6 +1,2 @@
-define('lodash/chain/wrapperCommit', ['../internal/LodashWrapper'], function (LodashWrapper) {
-    function wrapperCommit() {
-        return new LodashWrapper(this.value(), this.__chain__);
-    }
-    return wrapperCommit;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/chain/wrapperCommit",["../internal/LodashWrapper"],function(e){function t(){return new e(this.value(),this.__chain__)}return t});

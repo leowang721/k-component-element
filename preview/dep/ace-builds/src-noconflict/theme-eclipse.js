@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 ace.define("ace/theme/eclipse",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
 "use strict";
 

@@ -1,10 +1,2 @@
-define('lodash/collection/at', [
-    '../internal/baseAt',
-    '../internal/baseFlatten',
-    '../function/restParam'
-], function (baseAt, baseFlatten, restParam) {
-    var at = restParam(function (collection, props) {
-            return baseAt(collection, baseFlatten(props));
-        });
-    return at;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/at",["../internal/baseAt","../internal/baseFlatten","../function/restParam"],function(e,t,n){var r=n(function(n,r){return e(n,t(r))});return r});

@@ -1,18 +1,2 @@
-define('lodash/lang/toArray', [
-    '../internal/arrayCopy',
-    '../internal/getLength',
-    '../internal/isLength',
-    '../object/values'
-], function (arrayCopy, getLength, isLength, values) {
-    function toArray(value) {
-        var length = value ? getLength(value) : 0;
-        if (!isLength(length)) {
-            return values(value);
-        }
-        if (!length) {
-            return [];
-        }
-        return arrayCopy(value);
-    }
-    return toArray;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/toArray",["../internal/arrayCopy","../internal/getLength","../internal/isLength","../object/values"],function(e,t,n,r){function i(i){var o=i?t(i):0;if(!n(o))return r(i);if(!o)return[];else return e(i)}return i});

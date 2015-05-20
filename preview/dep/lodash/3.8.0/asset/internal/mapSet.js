@@ -1,9 +1,2 @@
-define('lodash/internal/mapSet', [], function () {
-    function mapSet(key, value) {
-        if (key != '__proto__') {
-            this.__data__[key] = value;
-        }
-        return this;
-    }
-    return mapSet;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/mapSet",[],function(){function e(e,t){if("__proto__"!=e)this.__data__[e]=t;return this}return e});

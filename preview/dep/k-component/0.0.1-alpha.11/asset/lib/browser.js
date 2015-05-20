@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component/lib/browser",["require"],function(){var e=window,t=e.opera?opera.version().replace(/\d$/,"")-0:parseFloat((/(?:IE |fox\/|ome\/ion\/)(\d+\.\d)/.exec(navigator.userAgent)||[,0])[1]),n={ie:!!e.VBArray&&Math.max(document.documentMode||0,t),firefox:!!e.netscape&&t,opera:!!e.opera&&t,chrome:!!e.chrome&&t,safari:/apple/i.test(navigator.vendor)&&t};return n});

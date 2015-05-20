@@ -1,14 +1,2 @@
-define('lodash/internal/pickByArray', ['./toObject'], function (toObject) {
-    function pickByArray(object, props) {
-        object = toObject(object);
-        var index = -1, length = props.length, result = {};
-        while (++index < length) {
-            var key = props[index];
-            if (key in object) {
-                result[key] = object[key];
-            }
-        }
-        return result;
-    }
-    return pickByArray;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/pickByArray",["./toObject"],function(e){function t(t,n){t=e(t);for(var r=-1,i=n.length,o={};++r<i;){var a=n[r];if(a in t)o[a]=t[a]}return o}return t});

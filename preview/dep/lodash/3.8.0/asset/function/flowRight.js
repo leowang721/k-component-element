@@ -1,4 +1,2 @@
-define('lodash/function/flowRight', ['../internal/createFlow'], function (createFlow) {
-    var flowRight = createFlow(true);
-    return flowRight;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/function/flowRight",["../internal/createFlow"],function(e){var t=e(!0);return t});

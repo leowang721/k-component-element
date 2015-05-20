@@ -1,14 +1,2 @@
-define('lodash/internal/escapeHtmlChar', [], function () {
-    var htmlEscapes = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            '\'': '&#39;',
-            '`': '&#96;'
-        };
-    function escapeHtmlChar(chr) {
-        return htmlEscapes[chr];
-    }
-    return escapeHtmlChar;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/escapeHtmlChar",[],function(){function e(e){return t[e]}var t={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"};return e});

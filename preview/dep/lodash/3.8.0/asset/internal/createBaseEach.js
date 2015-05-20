@@ -1,22 +1,2 @@
-define('lodash/internal/createBaseEach', [
-    './getLength',
-    './isLength',
-    './toObject'
-], function (getLength, isLength, toObject) {
-    function createBaseEach(eachFunc, fromRight) {
-        return function (collection, iteratee) {
-            var length = collection ? getLength(collection) : 0;
-            if (!isLength(length)) {
-                return eachFunc(collection, iteratee);
-            }
-            var index = fromRight ? length : -1, iterable = toObject(collection);
-            while (fromRight ? index-- : ++index < length) {
-                if (iteratee(iterable[index], index, iterable) === false) {
-                    break;
-                }
-            }
-            return collection;
-        };
-    }
-    return createBaseEach;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/createBaseEach",["./getLength","./isLength","./toObject"],function(e,t,n){function r(r,i){return function(o,a){var u=o?e(o):0;if(!t(u))return r(o,a);for(var s=i?u:-1,c=n(o);(i?s--:++s<u)&&a(c[s],s,c)!==!1;);return o}}return r});

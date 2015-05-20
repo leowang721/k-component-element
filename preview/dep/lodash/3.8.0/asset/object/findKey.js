@@ -1,7 +1,2 @@
-define('lodash/object/findKey', [
-    '../internal/baseForOwn',
-    '../internal/createFindKey'
-], function (baseForOwn, createFindKey) {
-    var findKey = createFindKey(baseForOwn);
-    return findKey;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/object/findKey",["../internal/baseForOwn","../internal/createFindKey"],function(e,n){var t=n(e);return t});

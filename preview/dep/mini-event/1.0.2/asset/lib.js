@@ -1,18 +1,2 @@
-define('mini-event/lib', ['require'], function (require) {
-    var lib = {};
-    lib.extend = function (source) {
-        for (var i = 1; i < arguments.length; i++) {
-            var addition = arguments[i];
-            if (!addition) {
-                continue;
-            }
-            for (var key in addition) {
-                if (addition.hasOwnProperty(key)) {
-                    source[key] = addition[key];
-                }
-            }
-        }
-        return source;
-    };
-    return lib;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("mini-event/lib",["require"],function(){var e={};return e.extend=function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];if(t){for(var r in t)if(t.hasOwnProperty(r))e[r]=t[r]}else;}return e},e});

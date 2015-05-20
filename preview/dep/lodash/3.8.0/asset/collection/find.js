@@ -1,7 +1,2 @@
-define('lodash/collection/find', [
-    '../internal/baseEach',
-    '../internal/createFind'
-], function (baseEach, createFind) {
-    var find = createFind(baseEach);
-    return find;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/collection/find",["../internal/baseEach","../internal/createFind"],function(e,t){var n=t(e);return n});

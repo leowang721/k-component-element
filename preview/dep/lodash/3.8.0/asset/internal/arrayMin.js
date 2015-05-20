@@ -1,14 +1,2 @@
-define('lodash/internal/arrayMin', [], function () {
-    var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-    function arrayMin(array) {
-        var index = -1, length = array.length, result = POSITIVE_INFINITY;
-        while (++index < length) {
-            var value = array[index];
-            if (value < result) {
-                result = value;
-            }
-        }
-        return result;
-    }
-    return arrayMin;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayMin",[],function(){function e(e){for(var n=-1,r=e.length,i=t;++n<r;){var o=e[n];if(i>o)i=o}return i}var t=Number.POSITIVE_INFINITY;return e});

@@ -1,12 +1,2 @@
-define('lodash/internal/arrayEach', [], function () {
-    function arrayEach(array, iteratee) {
-        var index = -1, length = array.length;
-        while (++index < length) {
-            if (iteratee(array[index], index, array) === false) {
-                break;
-            }
-        }
-        return array;
-    }
-    return arrayEach;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/internal/arrayEach",[],function(){function e(e,t){for(var n=-1,r=e.length;++n<r&&t(e[n],n,e)!==!1;);return e}return e});

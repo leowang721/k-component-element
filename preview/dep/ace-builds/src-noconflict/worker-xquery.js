@@ -1,3 +1,4 @@
+/*! @2015 Leo Wang. All Rights Reserved */
 "no use strict";
 ;(function(window) {
 if (typeof window.window != "undefined" && window.document) {

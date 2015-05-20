@@ -1,17 +1,2 @@
-define('lodash/lang/isPlainObject', [
-    './isNative',
-    '../internal/shimIsPlainObject'
-], function (isNative, shimIsPlainObject) {
-    var objectTag = '[object Object]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    var getPrototypeOf = isNative(getPrototypeOf = Object.getPrototypeOf) && getPrototypeOf;
-    var isPlainObject = !getPrototypeOf ? shimIsPlainObject : function (value) {
-            if (!(value && objToString.call(value) == objectTag)) {
-                return false;
-            }
-            var valueOf = value.valueOf, objProto = isNative(valueOf) && (objProto = getPrototypeOf(valueOf)) && getPrototypeOf(objProto);
-            return objProto ? value == objProto || getPrototypeOf(value) == objProto : shimIsPlainObject(value);
-        };
-    return isPlainObject;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isPlainObject",["./isNative","../internal/shimIsPlainObject"],function(e,t){var n="[object Object]",r=Object.prototype,i=r.toString,o=e(o=Object.getPrototypeOf)&&o,a=!o?t:function(r){if(!r||i.call(r)!=n)return!1;var a=r.valueOf,u=e(a)&&(u=o(a))&&o(u);return u?r==u||o(r)==u:t(r)};return a});

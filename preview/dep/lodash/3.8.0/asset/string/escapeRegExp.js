@@ -1,8 +1,2 @@
-define('lodash/string/escapeRegExp', ['../internal/baseToString'], function (baseToString) {
-    var reRegExpChars = /[.*+?^${}()|[\]\/\\]/g, reHasRegExpChars = RegExp(reRegExpChars.source);
-    function escapeRegExp(string) {
-        string = baseToString(string);
-        return string && reHasRegExpChars.test(string) ? string.replace(reRegExpChars, '\\$&') : string;
-    }
-    return escapeRegExp;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/string/escapeRegExp",["../internal/baseToString"],function(e){function n(n){return n=e(n),n&&r.test(n)?n.replace(t,"\\$&"):n}var t=/[.*+?^${}()|[\]\/\\]/g,r=RegExp(t.source);return n});

@@ -1,0 +1,2 @@
+/*! @2015 Leo Wang. All Rights Reserved */
+define("k-component-element/KItem",["require","k-component/component!k-component-element/k-item","eoo","k-component/Action"],function(require){require("k-component/component!k-component-element/k-item");var e={attributes:{},dispose:function(){this.$super(arguments)}},t=require("eoo").create(require("k-component/Action"),e);return t});

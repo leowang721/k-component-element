@@ -1,12 +1,2 @@
-define('lodash/lang/isArguments', [
-    '../internal/isArrayLike',
-    '../internal/isObjectLike'
-], function (isArrayLike, isObjectLike) {
-    var argsTag = '[object Arguments]';
-    var objectProto = Object.prototype;
-    var objToString = objectProto.toString;
-    function isArguments(value) {
-        return isObjectLike(value) && isArrayLike(value) && objToString.call(value) == argsTag;
-    }
-    return isArguments;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/lang/isArguments",["../internal/isArrayLike","../internal/isObjectLike"],function(e,t){function n(n){return t(n)&&e(n)&&o.call(n)==r}var r="[object Arguments]",i=Object.prototype,o=i.toString;return n});

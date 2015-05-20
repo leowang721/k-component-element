@@ -1,7 +1,2 @@
-define('lodash/array/flattenDeep', ['../internal/baseFlatten'], function (baseFlatten) {
-    function flattenDeep(array) {
-        var length = array ? array.length : 0;
-        return length ? baseFlatten(array, true) : [];
-    }
-    return flattenDeep;
-});
+/*! @2015 Leo Wang. All Rights Reserved */
+define("lodash/array/flattenDeep",["../internal/baseFlatten"],function(e){function t(t){var n=t?t.length:0;return n?e(t,!0):[]}return t});
