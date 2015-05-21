@@ -41,17 +41,5 @@ require('k-component-element/SomeElement');
 - 如果是基础元素、公共元素的开发，建议使用第二种以便进行合并、打包和预加载
 - 如果是业务元素、业务模块元素，建议使用第一种进行按需加载
 
-## 关于$k
-
-$k 是随意起的名字，主旨是为了能够获取到按需加载的元素&Action来进行操作和处理。
-
-```javascript
-var a = $k(query|element);  // 参数可以是查询字符串或者元素
-a.ready(method);  // 当元素&Action ready 后，做一些事情，method 的 this 指向对应的 Action
-a.on('eventName', method);  // 当元素&Action ready 后，绑定事件
-```
-## 关于$k.$
-其实就是 zepto，但是它不能穿透 shadowRoot，所以提供了这个来支持获取到 shadowRoot 中的元素
-```javascript
-$k.$(query|element);
-```
+## 关于 k-component
+查看[k-component](https://github.com/leowang721/k-component)
