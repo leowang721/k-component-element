@@ -34,7 +34,6 @@ define(function (require) {
          */
         bindEvents: function () {
             var me = this;
-
             // 只支持配置好的事件类型
             if (_.indexOf(me.supportedEvent, me.type) !== -1) {
                 me.$host.on(me.type, me.handler);
@@ -70,7 +69,6 @@ define(function (require) {
             var command = target.attr('data-command');
             var args = target.attr('data-command-args');
             var trigger = target.attr('data-command-trigger');
-
             if (command == null && (trigger && _.trim(trigger) !== this.type)) {
                 return;
             }
@@ -94,8 +92,6 @@ define(function (require) {
          * 销毁处理
          */
         dispose: function () {
-            var me = this;
-            me.unbindEvents();
             this.$super(arguments);
         }
     };
