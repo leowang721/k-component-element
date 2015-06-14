@@ -26,7 +26,6 @@ define(function (require) {
             this.canScroll = true;
             // 默认不支持CSS3,通过后面的判断来修正这个属性
             this.isSupportCSS3 = false;
-            this.a = 1;
             this.$main = $(this.el); 
             this.timer = null;
             this.elChildNum = $(this.el).children().length;
